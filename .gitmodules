@@ -1,0 +1,3 @@
+[submodule "best-practices"]
+	path = best-practices
+	url = https://github.com/trilliumtransit/gtfs-best-practices
