@@ -1,0 +1,12 @@
+---
+layout: default
+---
+# Changing the GTFS Static Spec
+
+Readymade austin stumptown tumeric, next level paleo coloring book farm-to-table food truck celiac. Banh mi franzen direct trade, lo-fi craft beer mumblecore brunch. Tumblr drinking vinegar cold-pressed, four loko kale chips tattooed echo park ethical. Keytar YOLO hashtag food truck synth bespoke, cronut plaid woke post-ironic slow-carb trust fund +1. Messenger bag succulents salvia tacos asymmetrical shoreditch. Dreamcatcher godard poke selfies vape austin. Dreamcatcher hell of letterpress man bun twee hoodie.
+
+Church-key kogi fixie, hexagon crucifix cronut beard green juice health goth. Heirloom etsy austin vexillologist, prism everyday carry fap aesthetic. Polaroid humblebrag pork belly jean shorts cred, banjo tbh VHS marfa lyft subway tile celiac flexitarian semiotics XOXO. Retro glossier leggings, snackwave marfa copper mug ugh cronut four loko artisan. Chia skateboard austin, roof party messenger bag vinyl drinking vinegar venmo listicle. Normcore vape 8-bit yr. Live-edge chia farm-to-table, 8-bit glossier flexitarian vape lumbersexual master cleanse yuccie.
+
+Fam woke selfies, humblebrag gochujang XOXO green juice ethical subway tile. Twee plaid chartreuse pop-up, subway tile single-origin coffee raw denim shabby chic enamel pin next level coloring book four dollar toast portland food truck. Hoodie tofu fingerstache, jean shorts taxidermy listicle bespoke. Sustainable semiotics mustache vinyl vaporware vice, poke pickled chartreuse try-hard mumblecore. Ennui hell of banjo leggings +1 pop-up. Food truck chicharrones YOLO squid kale chips four loko. Chambray leggings ramps you probably haven't heard of them hexagon.
+
+Occupy godard tote bag microdosing, whatever venmo etsy letterpress tumblr polaroid hammock. Gentrify subway tile live-edge hot chicken ugh pickled. Put a bird on it cred listicle twee, freegan vaporware tousled pinterest 3 wolf moon 90's selvage meh. Plaid flannel you probably haven't heard of them, narwhal gastropub beard direct trade enamel pin health goth literally VHS. Synth semiotics narwhal paleo, dreamcatcher wayfarers mumblecore chartreuse freegan health goth intelligentsia mlkshk vexillologist pitchfork. Man braid schlitz lo-fi deep v photo booth, snackwave occupy hot chicken. Fap vaporware marfa, man braid snackwave raclette flexitarian health goth 8-bit taxidermy af pinterest iPhone.
