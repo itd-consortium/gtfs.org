@@ -1,3 +1,27 @@
-h1 {
-  text-decoration: underline;
+body {
+  font-family: "Raleway";
+}
+
+.dropdown-menu {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  left: 0;
+}
+
+.table-of-contents { // best-practices
+  font-size: 9pt;
+}
+
+.table-of-contents a:hover {
+  text-decoration: none;
+}
+
+.sidenav a { // best-practices
+  display: block;
+}
+
+#best-practices h1 {
+  color: #666;
 }

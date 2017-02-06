@@ -2,6 +2,10 @@
 layout: default
 ---
 
+{% for page in examples %}
+  {{ page.content }}
+{% endfor %}
+
 # Welcome to GTFS.org
 
 ## Overview

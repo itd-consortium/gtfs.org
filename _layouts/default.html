@@ -7,13 +7,17 @@
     <meta name="description" content="placeholder">
     <link rel="icon" href={% if url == "/" %}"images/favicon.png" {% else %} "../images/favicon.png"{% endif %}>
     <link rel="apple-touch-icon-precomposed" href="images/favicon.png">
-    <link href='//fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
   </head>
   <body>
     {% include nav.html %}
-    {{ content }}
+      <div class="container">
+        {{ content }}
+      </div>
     {% include footer.html %}
+    <script src="{{ "/js/jquery-3.1.1.min.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/js/bootstrap.js" | prepend: site.baseurl }}"></script>
   </body>
 </html>
