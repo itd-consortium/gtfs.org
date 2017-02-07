@@ -4,17 +4,43 @@ body {
 
 .dropdown-menu {
   position: relative;
-  padding: 0;
-  margin: 0;
+  padding: 0 0 0 40px;
+  margin-bottom: 10px;
   top: 0;
   left: 0;
+  float: none;
+  min-width: 0;
+  border: none;
+  box-shadow: none;
+  font-size: 9pt;
+}
+
+.caret {
+  transform: rotate(-90deg);
+}
+
+.open .caret {
+  transform: rotate(0deg);
 }
 
 .table-of-contents { // best-practices
   font-size: 9pt;
 }
 
+.page {
+  padding: 125px 0px;
+}
+
+.table-of-contents a {
+  text-indent: -10px;
+  color: #222;
+}
+
 .table-of-contents a:hover {
+  text-decoration: none;
+}
+
+.table-of-contents a:focus {
   text-decoration: none;
 }
 
@@ -22,6 +48,62 @@ body {
   display: block;
 }
 
-#best-practices h1 {
-  color: #666;
+.container {
+  max-width: 1000px;
+}
+
+table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: $line-height-computed;
+  // Cells
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        padding: $table-cell-padding;
+        line-height: $line-height-base;
+        vertical-align: top;
+        border-top: 1px solid $table-border-color;
+      }
+    }
+  }
+  // Bottom align for column headings
+  > thead > tr > th {
+    vertical-align: bottom;
+    border-bottom: 2px solid $table-border-color;
+  }
+  // Remove top border from thead by default
+  > caption + thead,
+  > colgroup + thead,
+  > thead:first-child {
+    > tr:first-child {
+      > th,
+      > td {
+        border-top: 0;
+      }
+    }
+  }
+  // Account for multiple tbody instances
+  > tbody + tbody {
+    border-top: 2px solid $table-border-color;
+  }
+
+  // Nesting
+  table {
+    background-color: $body-bg;
+  }
+
+  // .table-striped functionality
+  > tbody > tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+  }
+  // customer thead color
+  > thead > tr {
+    background-color: #999;
+    color: #fff;
+  }
+
 }

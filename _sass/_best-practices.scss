@@ -1,0 +1,46 @@
+#best-practices {
+
+  &.container {
+    max-width: 1200px;
+  }
+
+  & ol {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  // page title "GTFS Data Best Practices"
+  & h1 {
+    color: #666;
+  }
+
+  // topic headline
+  & h2 {
+    border-bottom: 1px solid #ccc;
+    margin: 20px 0 20px 0;
+  }
+
+  & ul > li {
+    margin: 0 0 10px 0;
+  }
+
+  & p {
+    margin: 5px 0 10px 0;
+  }
+
+  & img {
+    display: block;
+    margin: 0 auto;
+    max-width: 75%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+  }
+
+  & img + span.caption {
+    text-align: center;
+    font-size: 10pt;
+  }
+
+}

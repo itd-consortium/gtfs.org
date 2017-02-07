@@ -3,10 +3,28 @@ layout: default
 ---
 # Changing the GTFS Static Spec
 
-Readymade austin stumptown tumeric, next level paleo coloring book farm-to-table food truck celiac. Banh mi franzen direct trade, lo-fi craft beer mumblecore brunch. Tumblr drinking vinegar cold-pressed, four loko kale chips tattooed echo park ethical. Keytar YOLO hashtag food truck synth bespoke, cronut plaid woke post-ironic slow-carb trust fund +1. Messenger bag succulents salvia tacos asymmetrical shoreditch. Dreamcatcher godard poke selfies vape austin. Dreamcatcher hell of letterpress man bun twee hoodie.
+### Overview
 
-Church-key kogi fixie, hexagon crucifix cronut beard green juice health goth. Heirloom etsy austin vexillologist, prism everyday carry fap aesthetic. Polaroid humblebrag pork belly jean shorts cred, banjo tbh VHS marfa lyft subway tile celiac flexitarian semiotics XOXO. Retro glossier leggings, snackwave marfa copper mug ugh cronut four loko artisan. Chia skateboard austin, roof party messenger bag vinyl drinking vinegar venmo listicle. Normcore vape 8-bit yr. Live-edge chia farm-to-table, 8-bit glossier flexitarian vape lumbersexual master cleanse yuccie.
+The official specification exists at [github.com/google/transit](https://github.com/google/transit).
 
-Fam woke selfies, humblebrag gochujang XOXO green juice ethical subway tile. Twee plaid chartreuse pop-up, subway tile single-origin coffee raw denim shabby chic enamel pin next level coloring book four dollar toast portland food truck. Hoodie tofu fingerstache, jean shorts taxidermy listicle bespoke. Sustainable semiotics mustache vinyl vaporware vice, poke pickled chartreuse try-hard mumblecore. Ennui hell of banjo leggings +1 pop-up. Food truck chicharrones YOLO squid kale chips four loko. Chambray leggings ramps you probably haven't heard of them hexagon.
+The GTFS Specification is not set in stone. Instead, it is an open specification developed and maintained by the community of transit agencies, developers, and other stakeholders who use GTFS. It is expected that this community of producers and consumers of GTFS data will have proposals for extending the spec to enable new capabilities. To help manage that process, the following procedures and guidelines have been established.
 
-Occupy godard tote bag microdosing, whatever venmo etsy letterpress tumblr polaroid hammock. Gentrify subway tile live-edge hot chicken ugh pickled. Put a bird on it cred listicle twee, freegan vaporware tousled pinterest 3 wolf moon 90's selvage meh. Plaid flannel you probably haven't heard of them, narwhal gastropub beard direct trade enamel pin health goth literally VHS. Synth semiotics narwhal paleo, dreamcatcher wayfarers mumblecore chartreuse freegan health goth intelligentsia mlkshk vexillologist pitchfork. Man braid schlitz lo-fi deep v photo booth, snackwave occupy hot chicken. Fap vaporware marfa, man braid snackwave raclette flexitarian health goth 8-bit taxidermy af pinterest iPhone.
+The amendment process is described at [github.com/google/transit/blob/master/gtfs/CHANGES.md](https://github.com/google/transit/blob/master/gtfs/CHANGES.md).
+
+### Guiding Principles
+In order to preserve the original vision of GTFS, a number of guiding principles have been established to take into consideration when extending the spec:
+
+> Feeds should be easy to create and edit.
+
+We chose CSV as the basis for the specification because it's easy to view and edit using spreadsheet programs and text editors, which is helpful for smaller agencies. It's also straightforward to generate from most programming languages and databases, which is good for publishers of larger feeds.
+
+> Feeds should be easy to parse.
+
+Feed readers should be able to extract the information they're looking for with as little work as possible. Changes and additions to the feed should be as broadly useful as possible, to minimize the number of code paths that readers of the feed need to implement. (However, making creation easier should be given precedence, since there will ultimately be more feed publishers than feed readers.)
+
+> Changes to the spec should be backwards-compatible.
+
+When adding features to the specification, we want to avoid making changes that will make existing feeds invalid. We don't want to create more work for existing feed publishers until they want to add capabilities to their feeds. Also, whenever possible, we want existing parsers to be able to continue to read the older parts of newer feeds.
+Speculative features are discouraged.
+
+Every new feature adds complexity to the creation and reading of feeds. Therefore, we want to take care to only add features that we know to be useful. Ideally, any proposal will have been tested by generating data for a real transit system that uses the new feature and writing software to read and display it. Note that the GTFS readily allows for extensions to the format through the addition of extra columns and files that are ignored by the official parsers & validators, so proposals can be easily prototyped and tested on existing feeds.

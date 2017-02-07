@@ -13,58 +13,63 @@
   </head>
   <body>
     {% include nav.html %}
-    <div id="best-practices">
-      <div class="col-sm-3">
-        <div class="list-group table-of-contents">
-          <a class="list-group-item" href="#contents">Contents</a>
-          <a class="list-group-item" href="#introduction">Introduction</a>
-          <li class="list-group-item">
-            <a class="" href="#publishing"><span class="caret"></span>Dataset Publishing & General Practices</a>
-            <ul class="sidenav">
-              <a href="#all-files">All Files</a>
-              <a href="#agency">agency.txt</a>
-              <a href="#feed-info">feed_info.txt</a>
-              <a href="#stops">stops.txt</a>
-              <a href="#stop-times">stop_times.txt</a>
-              <a href="#transfers">transfers.txt</a>
-              <a href="#trips">trips.txt</a>
-              <a href="#frequencies">frequencies.txt</a>
-              <a href="#routes">routes.txt</a>
-              <a href="#shapes">shapes.txt</a>
-              <a href="#calendar">calendar.txt and calendar_dates.txt</a>
-              <a href="#fare_rules">fare_rules.txt and fare_attributes.txt</a>
-            </ul>
-          </li>
-          <li class="list-group-item">
-            <a class="" href="#recommendations">
-              <span class="caret"></span>
-              Practice Recommendations Organized by Case
-            </a>
-            <ul class="sidenav">
-              <a href="#loop-routes">Loop Routes</a>
-              <a href="#lasso-routes">Lasso Routes</a>
-              <a href="#in-seat-tranfers">In-Seat Transfers & Vehicle Blocks</a>
-              <a href="#branches">Branches</a>
-            </ul>
-          </li>
-          <li class="list-group-item">
-            <a class="" href="#about">
-              <span class="caret"></span>
-              About This Document
-            </a>
-            <ul class="sidenav">
-              <a href="#objectives">Objectives</a>
-              <a href="#lasso-routes">Linking to this Document</a>
-              <a href="#in-seat-tranfers">How to Propose or Amend Published GTFS Best Practices</a>
-            </ul>
-          </li>
-          <a class="list-group-item" href="#working-group">GTFS Best Practices Working Group</a>
+    <section class="page">
+      <div id="best-practices" class="container">
+        <div class="col-sm-3">
+          <div class="list-group table-of-contents">
+            <li class="list-group-item"><a href="#introduction">Introduction</a></li>
+            <li class="list-group-item"><a href="#publishing">Dataset Publishing & General Practices</a></li>
+            <li class="list-group-item">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <span class="caret"></span>
+                Practice Recommendations Organized by File
+              </a>
+              <ul class="sidenav dropdown-menu">
+                <a href="#by-file">All Files</a>
+                <a href="#agency">agency.txt</a>
+                <a href="#feed-info">feed_info.txt</a>
+                <a href="#stops">stops.txt</a>
+                <a href="#stop-times">stop_times.txt</a>
+                <a href="#transfers">transfers.txt</a>
+                <a href="#trips">trips.txt</a>
+                <a href="#frequencies">frequencies.txt</a>
+                <a href="#routes">routes.txt</a>
+                <a href="#shapes">shapes.txt</a>
+                <a href="#calendar">calendar.txt and calendar_dates.txt</a>
+                <a href="#fare_rules">fare_rules.txt and fare_attributes.txt</a>
+              </ul>
+            </li>
+            <li class="list-group-item">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <span class="caret"></span>
+                Practice Recommendations Organized by Case
+              </a>
+              <ul class="sidenav dropdown-menu">
+                <a href="#by-case">Loop Routes</a>
+                <a href="#lasso-routes">Lasso Routes</a>
+                <a href="#in-seat-tranfers">In-Seat Transfers & Vehicle Blocks</a>
+                <a href="#branches">Branches</a>
+              </ul>
+            </li>
+            <li class="list-group-item">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <span class="caret"></span>
+                About This Document
+              </a>
+              <ul class="sidenav dropdown-menu">
+                <a href="#objectives">Objectives</a>
+                <a href="#lasso-routes">Linking to this Document</a>
+                <a href="#in-seat-tranfers">How to Propose or Amend Published GTFS Best Practices</a>
+              </ul>
+            </li>
+            <li class="list-group-item"><a href="#working-group">GTFS Best Practices Working Group</a></li>
+          </div>
+        </div>
+        <div class="col-sm-9">
+          {{ content }}
         </div>
       </div>
-      <div class="col-sm-9">
-        {{ content }}
-      </div>
-    </div>
+    </section>
     {% include footer.html %}
     <script src="{{ "/js/jquery-3.1.1.min.js" | prepend: site.baseurl }}"></script>
     <script src="{{ "/js/bootstrap.js" | prepend: site.baseurl }}"></script>

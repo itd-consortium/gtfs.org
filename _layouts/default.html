@@ -13,9 +13,11 @@
   </head>
   <body>
     {% include nav.html %}
-      <div class="container">
-        {{ content }}
-      </div>
+      <section class="page">
+        <div class="container">
+          {{ content }}
+        </div>
+      </section>
     {% include footer.html %}
     <script src="{{ "/js/jquery-3.1.1.min.js" | prepend: site.baseurl }}"></script>
     <script src="{{ "/js/bootstrap.js" | prepend: site.baseurl }}"></script>
