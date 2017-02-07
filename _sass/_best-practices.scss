@@ -14,10 +14,23 @@
     color: #666;
   }
 
-  // topic headline
+  // section headline
   & h2 {
     border-bottom: 1px solid #ccc;
-    margin: 20px 0 20px 0;
+    margin: 40px 0 20px 0;
+  }
+
+  // subsection headline
+  & h4 {
+    margin-top: 30px;
+  }
+
+  & h6 {
+    background-color: #555;
+    color: #fff;
+    border-radius: 6px;
+    display: inline-block;
+    padding: 10px;
   }
 
   & ul > li {
