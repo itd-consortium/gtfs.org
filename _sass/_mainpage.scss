@@ -1,5 +1,16 @@
+html {
+  height: 100%;
+}
+
 body {
-  font-family: "Raleway";
+  font-family: "Source Sans Pro";
+  padding-bottom: 60px;
+  min-height: 100%;
+  position: relative;
+}
+
+g > text {
+  font-family: "Source Sans Pro";
 }
 
 .dropdown-menu {
