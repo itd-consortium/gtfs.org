@@ -4,11 +4,6 @@
     max-width: 1200px;
   }
 
-  & ol {
-    list-style-type: none;
-    padding: 0;
-  }
-
   // page title "GTFS Data Best Practices"
   & h1 {
     color: #666;
@@ -22,24 +17,36 @@
 
   // subsection headline
   & h4 {
-    margin-top: 30px;
+    margin-top: 20px;
+    font-weight: bold;
   }
 
+  // system tags (Trip Planners, Human Readability, etc)
   & h6 {
     background-color: #555;
     color: #fff;
     border-radius: 6px;
     display: inline-block;
-    margin-top: 5px;
     padding: 10px;
   }
 
   & ul > li {
-    margin: 0 0 10px 0;
+    margin: 5px 0 10px 0;
   }
 
   & p {
     margin: 5px 0 10px 0;
+  }
+
+  // quotes from GTFS Specification
+  & q {
+    display: block;
+    padding: 10px 20px;
+    font-style: italic;
+    line-height: 2.0;
+    background-color: #e1f5fe;
+    color: #0288d1;
+    font-family: "Roboto";
   }
 
   & img {
@@ -55,6 +62,10 @@
   & img + span.caption {
     text-align: center;
     font-size: 10pt;
+  }
+
+  & blockquote {
+    font-size: 14px;
   }
 
 }
