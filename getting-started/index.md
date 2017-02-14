@@ -17,7 +17,7 @@ The best method to quickly share a GTFS dataset with a large number of developer
 
 * [TransitFeeds.com](https://transitfeeds.com/) ([submit data feed](https://github.com/TransitFeeds/TransitFeeds-Public/issues))
 * [Transitland feed registry](https://transit.land/feed-registry/) ([submit data feed](https://transit.land/feed-registry/feeds/new))
-* [TransitWiki.org “Publicly-accessible public transportation data”](https://www.transitwiki.org/TransitWiki/index.php/Publicly-accessible_public_transportation_data)
+* [TransitWiki.org](https://www.transitwiki.org/TransitWiki/index.php/Publicly-accessible_public_transportation_data) - “Publicly-accessible public transportation data”
 
 ## GTFS Applications
 

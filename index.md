@@ -10,24 +10,27 @@ layout: default
 
 ## Overview
 
-The General Transit Feed Specification (GTFS), also known as GTFS static to differentiate it from its companion GTFS realtime extension, defines a common format for public transportation schedules, and associated geographic and fare information. GTFS "feeds" let public transit agencies publish their transit data in a format that can be consumed and utilized in applications and developers write applications that consume that data in an interoperable way.
+The General Transit Feed Specification (GTFS), also known as GTFS Static to differentiate it from its companion [GTFS Realtime](https://developers.google.com/transit/gtfs-realtime/) extension, defines a common format for public transportation schedule, geographic and fare information. GTFS "feeds" let public transit agencies publish data in a format that can be consumed and utilized in applications in an interoperable way.
 
 GTFS data is available for more than 1350 public transportation providers. An estimated hundreds of applications utilize interoperable GTFS data. This website includes the GTFS reference (core specification), best practices for GTFS data, getting started guide, and links to other resources.
 
-## GTFS reference
+For further background on GTFS, see “[Pioneering Open Data Standards: The GTFS Story](http://beyondtransparency.org/chapters/part-2/pioneering-open-data-standards-the-gtfs-story/)” (Beyond Transparency).
+
+## GTFS Reference
 
 The GTFS reference defines all files, fields, and relationships of GTFS datasets. There are currently two official reference documents:
-   * on GitHub - This represents the most up-to-date version of the Specification, and also shows proposed amendments as pull requests.
-   * at developers.google.com - This version of the Specification is sometimes less up-to-date than that hosted at GitHub, but is translated into multiple languages.
+
+   * [On GitHub](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md) - This represents the most up-to-date version of the Specification, and also shows proposed amendments as [pull requests](https://github.com/google/transit/pulls).
+   * [At developers.google.com](https://developers.google.com/transit/gtfs/reference/) - This version of the Specification is sometimes less up-to-date than that hosted at GitHub, but is translated into multiple languages.
 
 ## GTFS Best Practices
 
-The GTFS reference [link] alone does not precisely define how to describe all aspects of transit service. GTFS Best Practices supplement the GTFS reference to provide clear directions to feed publishers and improve consistency of data structure across feeds.
+The GTFS reference [link] alone does not precisely define how to describe all aspects of transit service. [GTFS Best Practices]( {{ "/best-practices" | prepend: site.baseurl }} ) supplement the GTFS reference to provide clear directions to feed publishers and improve consistency of data structure across feeds.
 
 ## How do I start?
   1. Take a look at the GTFS examples.
   2. Create your own feeds using the reference and best practices as a guide.
-  3. Test your feed using validation tools.
-  4. Publish your feed [add link], as described in the Help Center.
+  3. Test your feed using [validation tools]( {{ "/testing" | prepend: site.baseurl }} ).
+  4. [Publish your feed]( {{ "/getting-started/#making-a-transit-feed-publicly-available" | prepend: site.baseurl }}), as described in the Help Center.
 
 See getting started on this site for a more complete guide.

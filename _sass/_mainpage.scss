@@ -9,50 +9,8 @@ body {
   position: relative;
 }
 
-g > text {
-  font-family: "Source Sans Pro";
-}
-
-.dropdown-menu {
-  position: relative;
-  padding: 0 0 0 40px;
-  margin-bottom: 10px;
-  top: 0;
-  left: 0;
-  float: none;
-  min-width: 0;
-  border: none;
-  box-shadow: none;
-  font-size: 9pt;
-}
-
-.caret {
-  transform: rotate(-90deg);
-}
-
-.open .caret {
-  transform: rotate(0deg);
-}
-
-.table-of-contents { // best-practices
-  font-size: 9pt;
-}
-
 .page {
   padding: 125px 0px;
-}
-
-.table-of-contents a {
-  text-indent: -10px;
-  color: #222;
-}
-
-.table-of-contents a:hover {
-  text-decoration: none;
-}
-
-.table-of-contents a:focus {
-  text-decoration: none;
 }
 
 .sidenav a { // best-practices

@@ -4,6 +4,69 @@
     max-width: 1200px;
   }
 
+  .table-of-contents {
+    background-color: #f9f9f9;
+    position: fixed;
+    font-size: 10pt;
+    padding: 10px 0;
+    box-shadow: -5px 5px 10px #999;
+    width: 252px;
+  }
+
+  .table-of-contents .list-group-item {
+    background-color: transparent;
+    border: none;
+    padding: 5px 15px;
+  }
+
+  .table-of-contents a {
+    text-indent: -10px;
+    color: #222;
+  }
+
+  .table-of-contents a:hover {
+    text-decoration: none;
+  }
+
+  .table-of-contents a:focus {
+    text-decoration: none;
+  }
+
+  .dropdown-menu {
+    position: relative;
+    padding: 0 0 0 40px;
+    margin-bottom: 10px;
+    top: 0;
+    left: 0;
+    float: none;
+    min-width: 0;
+    border: none;
+    box-shadow: none;
+    font-size: 10pt;
+    background-color: #f9f9f9;
+  }
+
+  .dropdown-toggle::before {
+  }
+
+  .caret {
+    position: relative;
+    top: -1px;
+    margin-left: 0px;
+    transform: rotate(-90deg);
+    transition: 0.2s all;
+  }
+
+  .open .caret {
+    transform: rotate(0deg);
+    transition: 0.2s all;
+  }
+
+  figcaption {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
   // page title "GTFS Data Best Practices"
   & h1 {
     color: #666;
@@ -11,13 +74,27 @@
 
   // section headline
   & h2 {
+    color: #666;
     border-bottom: 1px solid #ccc;
     margin: 40px 0 20px 0;
   }
 
-  // subsection headline
+  //subsection headline
+  & h3 {
+    margin: 30px 0 10px 0;
+    // border-left: 5px solid #ddd;
+    padding: 10px;
+  }
+
+  // GTFS field headline
   & h4 {
+    font-family: "Source Code Pro";
     margin-top: 20px;
+    font-weight: bold;
+  }
+
+  & code {
+    font-family: "Source Code Pro";
     font-weight: bold;
   }
 
@@ -38,6 +115,10 @@
     margin: 5px 0 10px 0;
   }
 
+  & blockquote {
+    border: none;
+  }
+
   // quotes from GTFS Specification
   & q {
     display: block;
@@ -46,8 +127,12 @@
     line-height: 2.0;
     background-color: #e1f5fe;
     color: #0288d1;
-    font-family: "Roboto";
   }
+
+  & q:before,
+    q:after {
+      content: "";
+}
 
   & img {
     display: block;
