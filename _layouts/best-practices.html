@@ -15,7 +15,7 @@
     {% include nav.html %}
     <section class="page">
       <div id="best-practices" class="container">
-        <div class="col-sm-3">
+        <div class="col-md-3 col-xs-12">
           <div class="list-group table-of-contents">
             <li class="list-group-item"><a href="#introduction">Introduction</a></li>
             <li class="list-group-item"><a href="#publishing">Dataset Publishing & General Practices</a></li>
@@ -64,11 +64,11 @@
             <li class="list-group-item"><a href="#working-group">GTFS Best Practices Working Group</a></li>
           </div>
         </div>
-        <div class="col-sm-9">
+        <div class="col-md-9 col-xs-12">
           {{ content }}
         </div>
       </div>
-    </section>
+    </section> <!-- page -->
     {% include footer.html %}
     <script src="{{ "/js/jquery-3.1.1.min.js" | prepend: site.baseurl }}"></script>
     <script src="{{ "/js/bootstrap.js" | prepend: site.baseurl }}"></script>

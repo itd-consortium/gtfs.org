@@ -1,11 +1,11 @@
-<nav class="navbar col-sm-12">
+<nav class="navbar col-xs-12">
   <div class="navbar-header">
-    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-menu-bar" aria-expanded="false" aria-controls="navbar">
+    <button type="button" data-target="#nav-menu-bar" class="navbar-toggle collapsed" data-toggle="collapse" aria-expanded="false">
       Menu
     </button>
   </div>
 
-  <div id="nav-menu-bar" class="navbar-collapse collapse">
+  <div id="nav-menu-bar" class="navbar-collapse collapse row">
     <ul class="nav navbar-nav">
       <li><a href="{{ "/" | prepend: site.baseurl }}">Home</a></li>
       <li><a href="{{ "/getting-started" | prepend: site.baseurl }}">Getting Started</a></li>
@@ -14,7 +14,5 @@
       <li><a href="{{ "/examples" | prepend: site.baseurl }}">GTFS Examples</a></li>
       <li><a href="{{ "/best-practices" | prepend: site.baseurl }}">GTFS Best Practices</a></li>
     </ul>
-    <div class="transit-line">
-    </div>
   </div>
 </nav>

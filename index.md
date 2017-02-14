@@ -25,7 +25,7 @@ The GTFS reference defines all files, fields, and relationships of GTFS datasets
 
 ## GTFS Best Practices
 
-The GTFS reference [link] alone does not precisely define how to describe all aspects of transit service. [GTFS Best Practices]( {{ "/best-practices" | prepend: site.baseurl }} ) supplement the GTFS reference to provide clear directions to feed publishers and improve consistency of data structure across feeds.
+The GTFS reference alone does not precisely define how to describe all aspects of transit service. [GTFS Best Practices]( {{ "/best-practices" | prepend: site.baseurl }} ) supplement the GTFS reference to provide clear directions to feed publishers and improve consistency of data structure across feeds.
 
 ## How do I start?
   1. Take a look at the GTFS examples.
