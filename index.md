@@ -29,7 +29,7 @@ The GTFS reference alone does not precisely define how to describe all aspects o
 
 ## How do I start?
   1. Take a look at the GTFS examples.
-  2. Create your own feeds using the reference and best practices as a guide.
+  2. Create your own feeds using the [reference](#gtfs-reference) and [best practices](best-practices) as a guide.
   3. Test your feed using [validation tools]( {{ "/testing" | prepend: site.baseurl }} ).
   4. [Publish your feed]( {{ "/getting-started/#making-a-transit-feed-publicly-available" | prepend: site.baseurl }}), as described in the Help Center.
 
