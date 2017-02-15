@@ -14,7 +14,7 @@ github_username:  jekyll
 markdown: kramdown
 gems:
   - jekyll-feed
+  - jekyll-octicons
 exclude:
   - Gemfile
   - Gemfile.lock
-  
