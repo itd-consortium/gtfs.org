@@ -20,10 +20,21 @@ body {
 code {
   color: #333;
   background-color: transparent;
+  font-family: "Source Code Pro";
+  font-weight: bold;
 }
 
 h1 {
   border-bottom: 1px solid #ccc;
+}
+
+p {
+  margin: 10px 0;
+}
+
+
+li {
+  margin: 5px 0;
 }
 
 table {
@@ -84,21 +95,6 @@ table {
 
 }
 
-img, svg {
-  display: block;
-  margin: 0 auto;
-  max-width: 50%;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
-}
-
-img,svg + span.caption {
-  text-align: center;
-  font-size: 10pt;
-}
-
 /////////////////////////
 
 body {
@@ -108,7 +104,6 @@ body {
 }
 
 p {
-  padding-bottom: $copy-line;
   line-height: 1.3em;
 }
 

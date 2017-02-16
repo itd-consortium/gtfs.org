@@ -55,9 +55,25 @@
     transition: 0.2s all;
   }
 
-  figcaption {
-    text-align: center;
-    margin-bottom: 50px;
+  figure {
+    margin-bottom: 40px;
+    margin-top: 30px;
+    border-top: 2px solid $color-red-bright;
+    border-bottom: 2px solid $color-red-bright;
+
+    figcaption {
+      text-align: center;
+      margin: 10px 0;
+      font-style: italic;
+    }
+
+    img, svg {
+      display: block;
+      margin: 0 auto;
+      max-width: 50%;
+
+    }
+
   }
 
   // page title "GTFS Data Best Practices"
@@ -85,11 +101,6 @@
     font-weight: bold;
   }
 
-  code {
-    font-family: "Source Code Pro";
-    font-weight: bold;
-  }
-
   // system tags (Trip Planners, Human Readability, etc)
   h6 {
     background-color: #ccc;
@@ -103,10 +114,6 @@
   }
 
   ul > li {
-    margin: 5px 0 10px 0;
-  }
-
-  p {
     margin: 5px 0 10px 0;
   }
 
