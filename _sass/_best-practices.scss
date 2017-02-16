@@ -14,7 +14,6 @@
   }
 
   .table-of-contents a {
-    text-indent: -10px;
     color: #222;
   }
 
@@ -56,13 +55,6 @@
     transition: 0.2s all;
   }
 
-  // .gtfs-tag {
-  //   cursor: pointer;
-  //   display: block;
-  //   position: absolute;
-  //   left: -10px;
-  // }
-
   figcaption {
     text-align: center;
     margin-bottom: 50px;
@@ -84,7 +76,6 @@
   //subsection headline
   h3 {
     margin: 20px 0 10px 0;
-    // border-left: 5px solid #ddd;
   }
 
   // GTFS field headline
@@ -101,11 +92,12 @@
 
   // system tags (Trip Planners, Human Readability, etc)
   h6 {
-    background-color: #555;
-    color: #fff;
+    background-color: #ccc;
+    color: #333;
     border-radius: 6px;
     display: inline-block;
-    padding: 10px;
+    padding: 5px 10px;
+    font-size: 13px;
   }
 
   ul > li {
@@ -114,10 +106,6 @@
 
   p {
     margin: 5px 0 10px 0;
-  }
-
-  blockquote {
-    border: none;
   }
 
   // quotes from GTFS Specification
@@ -134,21 +122,6 @@
     q:after {
       content: "";
 }
-
-  img {
-    display: block;
-    margin: 0 auto;
-    max-width: 75%;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
-  }
-
-  img + span.caption {
-    text-align: center;
-    font-size: 10pt;
-  }
 
   blockquote {
     font-size: 14px;
