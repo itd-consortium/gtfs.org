@@ -98,6 +98,8 @@
     display: inline-block;
     padding: 5px 10px;
     font-size: 13px;
+
+
   }
 
   ul > li {
@@ -114,8 +116,8 @@
     padding: 10px 20px;
     font-style: italic;
     line-height: 2.0;
-    background-color: #e1f5fe;
-    color: #0288d1;
+    background-color: $color-green-light;
+    color: $color-green-deep;
   }
 
   q:before,

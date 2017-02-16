@@ -1,0 +1,70 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,300,400italic,600italic);
+
+$font-sans: "Source Sans Pro", sans-serif;
+$font-serif: "Source Serif Pro", Georgia;
+
+
+$color-graublau-dark: #365354;
+$color-blue-dark:     #12486c;
+$color-green-dark:    #2a6d53;
+$color-yellow-dark:   hsl(36, 100%, 30%);
+$color-red-dark:      #6a191d;
+
+$color-graublau-deep: #336a6c;
+$color-blue-deep:     #2083c8;
+$color-green-deep:    hsl(160, 75%, 35%);
+$color-yellow-deep:   hsl(36, 100%, 45%);
+$color-red-deep:      #a00d1a;
+
+$color-graublau:      hsl(178, 21%, 50%);
+$color-blue:          hsl(201, 85%, 48%);
+$color-green:         hsl(160, 85%, 45%);
+$color-yellow:        hsl(36, 100%, 60%);
+$color-red:           hsl(0, 100%, 65%);
+
+$color-graublau-bright:      #b6cfce;
+$color-blue-bright:          hsl(201, 100%, 70%);
+$color-green-bright:         hsl(160, 85%, 50%);
+$color-yellow-bright:        hsl(36, 100%, 70%);
+$color-red-bright:           hsl(0, 100%, 75%);
+
+
+$color-graublau-light:#dbf0f4;
+$color-blue-light:    #c3e8fb;
+$color-green-light:   hsl(160, 95%, 80%);
+$color-yellow-light: hsl(39, 100%, 85%);
+$color-red-light:     #f8bec1;
+
+
+$meta-size: 12px;
+
+$copy-size: 16px;
+$copy-line: 21px;
+
+$screen-xs: 400px;
+$screen-s: 600px;
+$screen-m: 800px;
+$screen-l: 1000px;
+$screen-xl: 1200px;
+
+@mixin small-caps {
+  font-feature-settings:"smcp" 1, "c2sc" 1, "kern" 1;
+  letter-spacing: 0.03em;
+}
+
+@mixin meta {font-size: $meta-size;}
+
+@mixin copy {font-size: $copy-size;}
+
+@mixin dot {
+  content: '';
+  display:inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 0.3em;
+  vertical-align: middle;
+  -moz-border-radius:  50%;
+  border-radius:  50%;
+  border: black 2px solid;
+  background-color: white;
+}
