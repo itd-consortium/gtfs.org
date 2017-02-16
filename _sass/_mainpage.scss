@@ -99,6 +99,20 @@ img,svg + span.caption {
   font-size: 10pt;
 }
 
+table.example {
+
+  > thead > tr {
+    background: $color-blue-deep;
+  }
+
+  > tbody > tr:nth-of-type(odd) {
+    background-color: $color-blue-light;
+  }
+
+  border: 1px solid $color-blue-light;
+
+}
+
 /////////////////////////
 
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,300,400italic,600italic);
@@ -318,20 +332,4 @@ footer {
   background-color: #3d3d3d;
   color: #ececec;
   -webkit-font-smoothing: antialiased;
-}
-
-/////////////////////
-
-table.example {
-
-  > thead > tr {
-    background: $color-blue-deep;
-  }
-
-  > tbody > tr:nth-of-type(odd) {
-    background-color: $color-blue-light;
-  }
-
-  border: 1px solid $color-blue-light;
-
 }
