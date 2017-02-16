@@ -2,4 +2,4 @@
 layout: image
 ---
 
-![San Francisco Ferry Building](/best-practices/images/sf-ferry.png)
+![San Francisco Ferry Building](/images/sf-ferry.png)
