@@ -10,11 +10,13 @@ layout: default
 
 ## Overview
 
-The General Transit Feed Specification (GTFS), also known as GTFS Static to differentiate it from its companion [GTFS Realtime](https://developers.google.com/transit/gtfs-realtime/) extension, defines a common format for public transportation schedule, geographic and fare information. GTFS "feeds" let public transit agencies publish data in a format that can be consumed and utilized in applications in an interoperable way.
+The General Transit Feed Specification (GTFS) defines an open standard format for exchanging public transportation schedule, geographic and fare information. GTFS “feeds” let public transit agencies publish data in a format that can be consumed and utilized in applications in an interoperable way. The original GTFS format (sometimes referred to as GTFS Static) describes scheduled service, and its companion GTFS Realtime format is used to communicate services alerts and disruptions as they happen. At present, this site is mostly concerned with the GTFS Static format.
 
-GTFS data is available for more than 1350 public transportation providers. An estimated hundreds of applications utilize interoperable GTFS data. This website includes the GTFS reference (core specification), best practices for GTFS data, getting started guide, and links to other resources.
+GTFS data is available for more than 1350 public transportation providers, and hundreds of applications utilize interoperable GTFS data. This website includes the GTFS reference (core specification), best practices for GTFS data, getting started guide, and links to other resources.
 
-For further background on GTFS, see “[Pioneering Open Data Standards: The GTFS Story](http://beyondtransparency.org/chapters/part-2/pioneering-open-data-standards-the-gtfs-story/)” (Beyond Transparency).
+Among public transportation data formats, GTFS stands out because it was conceived to meet specific, practical needs in communicating service information to passengers, not as an exhaustive vocabulary for managing operational details. It is designed to be relatively simple to create and read for both people and machines. Even organizations that work with highly detailed data internally using standards like [NeTEx](http://netex-cen.eu/) find GTFS useful as a way to publish data for wider consumption in consumer applications.
+
+For further background on the origins of GTFS, see “[Pioneering Open Data Standards: The GTFS Story](http://beyondtransparency.org/chapters/part-2/pioneering-open-data-standards-the-gtfs-story/)” (Beyond Transparency).
 
 ## GTFS Reference
 
