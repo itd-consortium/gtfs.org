@@ -56,8 +56,8 @@
   }
 
   figure {
-    margin-bottom: 40px;
-    margin-top: 30px;
+    margin: 10px 0;
+    padding: 5px 0;
     border-top: 2px solid $color-red-bright;
     border-bottom: 2px solid $color-red-bright;
 
@@ -101,15 +101,67 @@
   }
 
   // system tags (Trip Planners, Human Readability, etc)
-  h6 {
+
+  .tag {
+    -webkit-padding-start: 0;
+    white-space: nowrap;
+    display: inline-block;
+    margin: 0.2em 0.1em;
+    padding: 0 0.5em 0.15em;
+    @include small-caps;
+    @include meta;
+    background-color: #ececec;
+
+    a {padding: 0.15em 0;}
+
+    a, a:hover, a:visited, a:active {
+      background-color: inherit;
+      border: none;
+      text-decoration: none;
+    }
+
+    &:hover {
+      background-color: $color-red-deep;
+      color: white;
+      text-decoration: none;
+    }
+
+    &:active {
+      color: white;
+      background-color: black;
+      text-decoration: none;
+    }
+
+    &:before {content: none;}
+  }
+
+  .tag.trip-planners::before {
+    content: "Trip Planners";
+  }
+
+  .tag.arrival-predictions::before {
+    content: "Arrival Predictions";
+  }
+
+  .tag.timetables::before {
+    content: "Timetables";
+  }
+
+  .tag.human-readability::before {
+    content: "Human Readability";
+  }
+
+  .tag.planning-and-analysis::before {
+    content: "Planning and Analysis";
+  }
+
+  h6 { // should be removed upon publishing
     background-color: #ccc;
     color: #333;
     border-radius: 6px;
     display: inline-block;
     padding: 5px 10px;
     font-size: 13px;
-
-
   }
 
   ul > li {
@@ -124,6 +176,7 @@
     line-height: 2.0;
     background-color: $color-green-light;
     color: #333;
+    margin: 10px 0;
   }
 
   q:before,

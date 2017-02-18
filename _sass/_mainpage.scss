@@ -83,6 +83,7 @@ table {
   > tbody > tr:nth-of-type(odd) {
     background-color: #f9f9f9;
   }
+
   // customer thead color
   > thead > tr {
     background-color: #999;
@@ -212,37 +213,7 @@ blockquote {
 //
 // ::selection {background-color: $color-green;}
 
-.tags {-webkit-padding-start: 0;}
 
-.tags li {
-  display: inline-block;
-  margin: 0.2em 0.1em;
-  padding: 0 0.5em 0.15em;
-  @include small-caps;
-  @include meta;
-  background-color: #ececec;
-
-  a {padding: 0.15em 0;}
-
-  a, a:hover, a:visited, a:active {
-    background-color: inherit;
-    border: none;
-    text-decoration: none;
-  }
-
-  &:hover {
-    background-color: $color-green;
-    text-decoration: none;
-  }
-
-  &:active {
-    color: white;
-    background-color: black;
-    text-decoration: none;
-  }
-
-  &:before {content: none;}
-  }
 
 footer {
   background-color: #3d3d3d;
@@ -254,6 +225,10 @@ footer {
 
 table.example {
 
+  border: 1px solid $color-blue-light;
+
+  margin-top: 10px;
+
   > thead > tr {
     background: $color-blue-deep;
   }
@@ -262,6 +237,28 @@ table.example {
     background-color: $color-blue-light;
   }
 
-  border: 1px solid $color-blue-light;
+}
+
+table.recommendation {
+
+  // border-left: 1px solid #eee;
+  // border-right: 1px solid #eee;
+
+  > thead > tr {
+    background-color: $color-red-deep;
+  }
+
+  > tbody > tr {
+    background-color: white;
+    border-bottom: 1px solid #eee;
+  }
+
+  > tbody > tr:nth-of-type(odd) {
+
+  }
+
+  .field-row {
+    border-top: 2px solid $color-red-deep;
+  }
 
 }
