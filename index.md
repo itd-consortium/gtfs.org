@@ -6,9 +6,7 @@ layout: default
   {{ page.content }}
 {% endfor %}
 
-# Welcome to GTFS.org
-
-## Overview
+# About the General Transit Feed Specification (GTFS)
 
 The General Transit Feed Specification (GTFS) defines an open standard format for exchanging public transportation schedule, geographic and fare information. GTFS “feeds” let public transit agencies publish data in a format that can be consumed and utilized in applications in an interoperable way. The original GTFS format (sometimes referred to as GTFS Static) describes scheduled service, and its companion GTFS Realtime format is used to communicate services alerts and disruptions as they happen. At present, this site is mostly concerned with the GTFS Static format.
 
@@ -18,21 +16,10 @@ Among public transportation data formats, GTFS stands out because it was conceiv
 
 For further background on the origins of GTFS, see “[Pioneering Open Data Standards: The GTFS Story](http://beyondtransparency.org/chapters/part-2/pioneering-open-data-standards-the-gtfs-story/)” (Beyond Transparency).
 
-## GTFS Reference
-
-The GTFS reference defines all files, fields, and relationships of GTFS datasets. There are currently two official reference documents:
-
-   * [On GitHub](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md) - This represents the most up-to-date version of the Specification, and also shows proposed amendments as [pull requests](https://github.com/google/transit/pulls).
-   * [At developers.google.com](https://developers.google.com/transit/gtfs/reference/) - This version of the Specification is sometimes less up-to-date than that hosted at GitHub, but is translated into multiple languages.
-
-## GTFS Best Practices
-
-The GTFS reference alone does not precisely define how to describe all aspects of transit service. [GTFS Best Practices]( {{ "/best-practices" | prepend: site.baseurl }} ) supplement the GTFS reference to provide clear directions to feed publishers and improve consistency of data structure across feeds.
-
 ## How do I start?
-  1. Take a look at the GTFS examples.
-  2. Create your own feeds using the [reference](#gtfs-reference) and [best practices]( {{ "/best-practices" | prepend: site.baseurl }} ) as a guide.
-  3. Test your feed using [validation tools]( {{ "/testing" | prepend: site.baseurl }} ).
-  4. [Publish your feed]( {{ "/getting-started/#making-a-transit-feed-publicly-available" | prepend: site.baseurl }}), as described in the Help Center.
+  1. Take a look at the [GTFS data examples](examples).
+  2. Create your own feeds using the [reference](reference) and [best practices](best-practices) as a guide.  [GTFS Best Practices](best-practices) supplement the GTFS reference to provide clear directions to feed publishers and improve consistency of data structure across feeds.
+  3. Test your feed using [validation tools](testing).
+  4. [Publish your feed](getting-started/#making-a-transit-feed-publicly-available), as described in the Help Center.
 
-See getting started on this site for a more complete guide.
+See [getting started](getting-started) for a more complete guide.
