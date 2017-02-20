@@ -1,58 +1,36 @@
 #best-practices {
 
-  .table-of-contents {
+  .sidenav {
     background-color: #f9f9f9;
     font-size: 10pt;
     padding: 10px 0;
     box-shadow: -5px 5px 10px #999;
-  }
 
-  .table-of-contents .list-group-item {
-    background-color: transparent;
-    border: none;
-    padding: 5px 15px;
-  }
+      .list-group-item {
+        background-color: transparent;
+        border: none;
+        padding: 5px 15px;
+      }
 
-  .table-of-contents a {
-    color: #222;
-  }
+      a {
+        color: #222;
 
-  .table-of-contents a:hover {
-    text-decoration: none;
-  }
+        &:hover {
+          text-decoration: none;
+          color: $color-blue-deep;
+        }
 
-  .table-of-contents a:focus {
-    text-decoration: none;
-  }
+        &:focus {
+          text-decoration: none;
+        }
+      }
 
-  .dropdown-menu {
-    position: relative;
-    padding: 0 0 0 40px;
-    margin-bottom: 10px;
-    top: 0;
-    left: 0;
-    float: none;
-    min-width: 0;
-    border: none;
-    box-shadow: none;
-    font-size: 10pt;
-    background-color: #f9f9f9;
-  }
-
-  .dropdown-toggle::before {
-  }
-
-  .caret {
-    position: relative;
-    top: -1px;
-    margin-left: 0px;
-    transform: rotate(-90deg);
-    transition: 0.2s all;
-  }
-
-  .open .caret {
-    transform: rotate(0deg);
-    transition: 0.2s all;
+      li {
+        list-style: none;
+        margin: 0 0 0 10px;
+        padding: 2px 0;
+        text-indent: -10px;
+      }
   }
 
   figure {
