@@ -58,8 +58,8 @@
   figure {
     margin: 10px 0;
     padding: 5px 0;
-    border-top: 2px solid $color-red-bright;
-    border-bottom: 2px solid $color-red-bright;
+    border-top: 2px solid $color-yellow-bright;
+    border-bottom: 2px solid $color-yellow-bright;
 
     figcaption {
       text-align: center;
@@ -156,15 +156,6 @@
     content: "Human Readability";
   }
 
-  h6 { // should be removed upon publishing
-    background-color: #ccc;
-    color: #333;
-    border-radius: 6px;
-    display: inline-block;
-    padding: 5px 10px;
-    font-size: 13px;
-  }
-
   ul > li {
     margin: 5px 0 10px 0;
   }
@@ -184,9 +175,5 @@
     q:after {
       content: "";
 }
-
-  blockquote {
-    font-size: 14px;
-  }
 
 }

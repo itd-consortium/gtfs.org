@@ -13,6 +13,27 @@ body {
   padding: 125px 0px;
 }
 
+$color-orange-light: #ffb469;
+$color-orange: #ff8834;
+$color-orange-deep: #ff6c00;
+$color-orange-special: #FF841C;
+
+#gtfs-overview {
+  padding-top: 125px;
+  background-color: $color-orange-deep;
+  color: white;
+
+  h1 {
+    font-weight: 300;
+    border: none;
+  }
+
+}
+
+#how-do-i-start {
+  padding-bottom: 125px;
+}
+
 .sidenav a { // best-practices
   display: block;
 }
@@ -25,7 +46,8 @@ code {
 }
 
 h1 {
-  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+  border-bottom: 2px solid $color-red;
 }
 
 p {
@@ -248,9 +270,6 @@ table.example {
 }
 
 table.recommendation {
-
-  // border-left: 1px solid #eee;
-  // border-right: 1px solid #eee;
 
   > thead > tr {
     background-color: $color-red-deep;

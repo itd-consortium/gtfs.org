@@ -1,7 +1,8 @@
 .navbar {
   border-radius: 0;
   text-align: center;
-  border-bottom: 2px solid #4ff5aa;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-bottom: 4px solid black;
 }
 
 .nav a {
@@ -15,4 +16,84 @@
 .navbar-nav {
   display: inline-block;
   float: none;
+}
+
+.navbar-toggle {
+  float: none;
+  margin: 0 auto;
+  padding: 15px 0;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid black;
+  border-radius: 0;
+}
+
+.waypoints {
+
+    ul {
+      position: relative;
+
+    }
+
+    ul > li {
+
+      &:nth-child(4n+1) a:hover {
+        color: $color-red;
+      }
+
+      &:nth-child(4n+2) a:hover {
+        color: $color-blue;
+      }
+
+      &:nth-child(4n+3) a:hover {
+        color: $color-green;
+      }
+
+      &:nth-child(4n+4) a:hover {
+        color: $color-yellow;
+      }
+
+      margin: 0;
+
+      a {
+        border-bottom: none;
+        padding: 15px 15px 10px 15px;
+
+        &:hover {
+
+        }
+
+        .dot {
+          @include dot;
+          display: block;
+          position: relative;
+          margin: 0 auto;
+          height: 12px;
+          width: 12px;
+          bottom: -22px;
+          border-width: 3px;
+        }
+
+      }
+
+    }
+  }
+
+@media (max-width: $screen-m) {
+  .waypoints {
+    // position: relative;
+
+    ul > li {
+      // padding-top: 0.5em;
+    }
+    ul li a {
+
+      .dot {
+        display: none;
+      }
+
+      // border-bottom: none;
+      // color: rgba(0,0,0,1);
+    }
+  }
 }

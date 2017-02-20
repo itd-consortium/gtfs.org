@@ -20,12 +20,9 @@
             <li class="list-group-item"><a href="#introduction">Introduction</a></li>
             <li class="list-group-item"><a href="#publishing">Dataset Publishing & General Practices</a></li>
             <li class="list-group-item">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                <span class="caret"></span>
-                Recommendations Organized by File
-              </a>
-              <ul class="sidenav dropdown-menu">
-                <a href="#by-file">All Files</a>
+              <a href="#by-file">Recommendations Organized by File</a>
+              <ul class="sidenav">
+                <a href="#all-files">All Files</a>
                 <a href="#agency">agency.txt</a>
                 <a href="#feed-info">feed_info.txt</a>
                 <a href="#stops">stops.txt</a>
@@ -40,22 +37,16 @@
               </ul>
             </li>
             <li class="list-group-item">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                <span class="caret"></span>
-                Recommendations Organized by Case
-              </a>
-              <ul class="sidenav dropdown-menu">
-                <a href="#by-case">Loop Routes</a>
+              <a href="#by-case">Recommendations Organized by Case</a>
+              <ul class="sidenav">
+                <a href="#loop-routes">Loop Routes</a>
                 <a href="#lasso-routes">Lasso Routes</a>
                 <a href="#branches">Branches</a>
               </ul>
             </li>
             <li class="list-group-item">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                <span class="caret"></span>
-                About This Document
-              </a>
-              <ul class="sidenav dropdown-menu">
+              <a href="#about">About This Document</a>
+              <ul class="sidenav">
                 <a href="#objectives">Objectives</a>
                 <a href="#linking">Linking to this Document</a>
                 <a href="#amend">How to Propose or Amend Published GTFS Best Practices</a>
@@ -70,8 +61,5 @@
       </div>
     </section> <!-- page -->
     {% include footer.html %}
-    <script src="{{ "/js/jquery-3.1.1.min.js" | prepend: site.baseurl }}"></script>
-    <script src="{{ "/js/bootstrap.js" | prepend: site.baseurl }}"></script>
-    <script src="{{ "/js/app.js" | prepend: site.baseurl }}"></script>
   </body>
 </html>

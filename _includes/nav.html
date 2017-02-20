@@ -1,18 +1,18 @@
-<nav class="navbar col-xs-12">
-  <div class="navbar-header">
-    <button type="button" data-target="#nav-menu-bar" class="navbar-toggle collapsed" data-toggle="collapse" aria-expanded="false">
+<nav class="navbar navbar-fixed-top col-xs-12">
+  <div class="navbar-header row">
+    <button type="button" data-target="#main-nav" class="navbar-toggle collapsed" data-toggle="collapse" aria-expanded="false">
       Menu
     </button>
   </div>
 
-  <div id="nav-menu-bar" class="navbar-collapse collapse row">
+  <div id="main-nav" class="waypoints navbar-collapse collapse row">
     <ul class="nav navbar-nav">
-      <li><a href="{{ "/" | prepend: site.baseurl }}">Home</a></li>
-      <li><a href="{{ "/getting-started" | prepend: site.baseurl }}">Getting Started</a></li>
-      <li><a href="{{ "/testing" | prepend: site.baseurl }}">Testing Feeds</a></li>
-      <li><a href="{{ "/reference" | prepend: site.baseurl }}">Spec Reference</a></li>
-      <li><a href="{{ "/examples" | prepend: site.baseurl }}">Examples</a></li>
-      <li><a href="{{ "/best-practices" | prepend: site.baseurl }}">Best Practices</a></li>
+      <li><a href="{{ "/" | prepend: site.baseurl }}"><span>Home</span><div class="dot"></div></a></li>
+      <li><a href="{{ "/getting-started" | prepend: site.baseurl }}">Getting Started<div class="dot"></div></a></li>
+      <li><a href="{{ "/testing" | prepend: site.baseurl }}">Testing Feeds<div class="dot"></div></a></li>
+      <li><a href="{{ "/reference" | prepend: site.baseurl }}">Spec Reference<div class="dot"></div></a></li>
+      <li><a href="{{ "/examples" | prepend: site.baseurl }}">Examples<div class="dot"></div></a></li>
+      <li><a href="{{ "/best-practices" | prepend: site.baseurl }}">Best Practices<div class="dot"></div></a></li>
     </ul>
   </div>
 </nav>
