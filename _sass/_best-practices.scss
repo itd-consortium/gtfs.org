@@ -145,7 +145,7 @@
     padding: 10px 20px;
     font-style: italic;
     line-height: 2.0;
-    background-color: $color-green-light;
+    background-color: #e1f5fe;
     color: #333;
     margin: 10px 0;
   }
@@ -157,6 +157,108 @@
 
   #rmi-logo {
     width: 25%;
+  }
+
+}
+
+// imported from Bootstrap and applied to all tables
+
+table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: $line-height-computed;
+  // Cells
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        padding: $table-cell-padding;
+        line-height: $line-height-base;
+        vertical-align: top;
+      }
+    }
+  }
+  // Bottom align for column headings
+  > thead > tr > th {
+    vertical-align: bottom;
+  }
+  // Remove top border from thead by default
+  > caption + thead,
+  > colgroup + thead,
+  > thead:first-child {
+    > tr:first-child {
+      > th,
+      > td {
+        border-top: 0;
+      }
+    }
+  }
+  // Account for multiple tbody instances
+  > tbody + tbody {
+    border-top: 2px solid $table-border-color;
+  }
+
+  // Nesting
+  table {
+    background-color: $body-bg;
+  }
+
+  // .table-striped functionality
+  > tbody > tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+  }
+
+  // customer thead color
+  > thead > tr {
+    background-color: #999;
+    color: #fff;
+  }
+
+  > thead > tr > th {
+    font-weight: normal;
+  }
+
+}
+
+table.example {
+
+  border: 1px solid $color-yellow-light;
+
+  margin-top: 10px;
+
+  > thead > tr {
+    background: $color-yellow-deep;
+  }
+
+  > tbody > tr:nth-of-type(odd) {
+    background-color: $color-yellow-light;
+  }
+
+  // > thead > tr > th, > tbody > tr > td {
+  //   text-align: center;
+  // }
+
+}
+
+table.recommendation {
+
+  > thead > tr {
+    background-color: $color-green-deep;
+  }
+
+  > tbody > tr {
+    background-color: white;
+    border-bottom: 1px solid #eee;
+  }
+
+  > tbody > tr:nth-of-type(odd) {
+
+  }
+
+  .field-row {
+    border-top: 2px solid $color-green-deep;
   }
 
 }
