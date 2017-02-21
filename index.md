@@ -1,7 +1,6 @@
 ---
 layout: homepage
 ---
-
 <section id="gtfs-overview" class="jumbotron">
   <div class="container">
     <div class="row">
@@ -25,6 +24,25 @@ layout: homepage
     </div>
   </div>
 </section>
+
+<nav class="navbar col-xs-12">
+  <div class="navbar-header row">
+    <button type="button" data-target="#main-nav" class="navbar-toggle collapsed" data-toggle="collapse" aria-expanded="false">
+      Menu
+    </button>
+  </div>
+
+  <div id="main-nav" class="waypoints navbar-collapse collapse row">
+    <ul class="nav navbar-nav">
+      <li><a href="{{ "/" | prepend: site.baseurl }}"><span>Home</span><div class="dot"></div></a></li>
+      <li><a href="{{ "/getting-started" | prepend: site.baseurl }}">Getting Started<div class="dot"></div></a></li>
+      <li><a href="{{ "/testing" | prepend: site.baseurl }}">Testing Feeds<div class="dot"></div></a></li>
+      <li><a href="{{ "/reference" | prepend: site.baseurl }}">Spec Reference<div class="dot"></div></a></li>
+      <li><a href="{{ "/examples" | prepend: site.baseurl }}">Examples<div class="dot"></div></a></li>
+      <li><a href="{{ "/best-practices" | prepend: site.baseurl }}">Best Practices<div class="dot"></div></a></li>
+    </ul>
+  </div>
+</nav>
 
 <section id="how-do-i-start">
   <div class="container">

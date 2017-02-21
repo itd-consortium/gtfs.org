@@ -7,31 +7,46 @@ body {
   padding-bottom: 60px;
   min-height: 100%;
   position: relative;
+  font-family: $font-sans;
+  line-height: 1.3em;
+  @include copy;
 }
 
 .page {
   padding: 125px 0px;
 }
 
-$color-orange-light: #ffb469;
-$color-orange: #ff8834;
-$color-orange-deep: #ff6c00;
-$color-orange-special: #FF841C;
+#homepage {
+  #gtfs-overview {
+    background-color: $nav-color;
+    color: white;
+    margin-bottom: 0;
 
-#gtfs-overview {
-  padding-top: 125px;
-  background-color: $color-orange-deep;
-  color: white;
+    p {
+      font-size: 18px;
+    }
 
-  h1 {
-    font-weight: 300;
-    border: none;
+    h1 {
+      font-weight: 300;
+      border: none;
+    }
+
+    a {
+      color: white;
+      border-bottom: 2px solid white;
+
+      &:hover {
+        background-color: white;
+        color: $nav-color;
+        text-decoration: none;
+      }
+    }
+
   }
 
-}
-
-#how-do-i-start {
-  padding-bottom: 125px;
+  #how-do-i-start {
+    padding-bottom: 125px;
+  }
 }
 
 code {
@@ -43,17 +58,21 @@ code {
 
 h1 {
   padding-bottom: 5px;
-  border-bottom: 2px solid $color-red;
+  border-bottom: 2px solid $nav-color;
 }
 
 p {
   margin: 10px 0;
+  line-height: 1.3em;
 }
 
 
 li {
   margin: 5px 0;
 }
+
+
+// imported from Bootstrap and applied to all tables
 
 table {
   width: 100%;
@@ -128,50 +147,38 @@ img, svg {
   max-width: 1400px;
 }
 
-/////////////////////////
-
-body {
-  font-family: $font-sans;
-  line-height: 1.3em;
-  @include copy;
+a, a:hover, a:visited, a:active {
+  color: inherit;
+  text-decoration: none;
+  padding: 0 0.07em;
+  margin: 0 -0.05em;
 }
 
-p {
-  line-height: 1.3em;
+a {
+  border-bottom: 2px solid $color-green;
 }
 
-article {
-  max-width: 35em;
-  margin: 3em auto;
-  padding: 0 2em;
+a:visited {
+  border-color: $color-blue;
 }
 
+a:hover {
+  background-color: $color-green;
+  border-color: $color-green;
+}
 
-// a, a:hover, a:visited, a:active {
-//   color: inherit;
-//   text-decoration: none;
-//   padding: 0 0.07em;
-//   margin: 0 -0.05em;
-// }
-//
-// a {border-bottom: 2px solid $color-green;}
-// a:visited {
-//   border-color: $color-blue;
-// }
-// a:hover {
-//   background-color: $color-green;
-//   border-color: $color-green;
-// }
-// a:active {
-//   border-color: $color-blue;
-//   background-color: $color-blue;
-//   text-decoration: none;
-//   position: relative;
-//   top: 1px;
-//   right: -1px;
-// }
-// a:focus {text-decoration: none;}
+a:active {
+  border-color: $color-blue;
+  background-color: $color-blue;
+  text-decoration: none;
+  position: relative;
+  top: 1px;
+  right: -1px;
+}
 
+a:focus {
+  text-decoration: none;
+}
 
 blockquote {
   margin: 0;
@@ -194,60 +201,11 @@ blockquote {
   }
 }
 
-// ul {
-//   list-style: none;
-//   margin: 0;
-//
-//
-//
-//   ol {list-style-type: decimal;}
-//
-//   li {position: relative;}
-//
-//   >li:before {
-//     @include dot;
-//     width: 8px;
-//     height: 8px;
-//     margin-top: -0.15em;
-//   }
-//
-//   ul>li:before {background-color: $color-graublau;}
-// }
-//
-// ol {
-//   list-style-position: inside;
-//   >ol {list-style-type: lower-alpha;}
-// }
-//
-// ol, ul {
-//
-//   -webkit-padding-start: .3em;
-//   margin-bottom: 1.3em;
-//
-//   @media (min-width: $screen-s) {
-//     -webkit-padding-start: 1em;
-//   }
-//
-//   li { padding-bottom: 0.4em;}
-//
-// }
-//
-// :focus {
-//   outline: none;
-//   background-color: $color-green;
-// }
-//
-// ::selection {background-color: $color-green;}
-
-
-
 footer {
   background-color: #3d3d3d;
   color: #ececec;
   -webkit-font-smoothing: antialiased;
 }
-
-/////////////////////
 
 table.example {
 
@@ -261,6 +219,10 @@ table.example {
 
   > tbody > tr:nth-of-type(odd) {
     background-color: $color-blue-light;
+  }
+
+  > thead > tr > th, > tbody > tr > td {
+    text-align: center;
   }
 
 }
