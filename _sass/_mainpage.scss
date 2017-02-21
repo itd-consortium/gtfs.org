@@ -16,11 +16,50 @@ body {
   padding: 125px 0px;
 }
 
+.page-content {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  max-width: 1400px;
+}
+
+code {
+  color: #333;
+  background-color: transparent;
+  font-family: "Source Code Pro";
+  font-weight: bold;
+}
+
+h1 {
+  padding-bottom: 5px;
+  border-bottom: 2px solid $nav-color;
+}
+
+p {
+  margin: 10px 0;
+  line-height: 1.3em;
+}
+
+li {
+  margin: 5px 0;
+}
+
+img, svg {
+  display: block;
+  margin: 0 auto;
+  max-width: 50%;
+}
+
+//homepage-only styles
+
 #homepage {
+
   #gtfs-overview {
     background-color: $nav-color;
     color: white;
     margin-bottom: 0;
+    padding-bottom: 50px;
 
     p {
       font-size: 18px;
@@ -49,103 +88,7 @@ body {
   }
 }
 
-code {
-  color: #333;
-  background-color: transparent;
-  font-family: "Source Code Pro";
-  font-weight: bold;
-}
-
-h1 {
-  padding-bottom: 5px;
-  border-bottom: 2px solid $nav-color;
-}
-
-p {
-  margin: 10px 0;
-  line-height: 1.3em;
-}
-
-
-li {
-  margin: 5px 0;
-}
-
-
-// imported from Bootstrap and applied to all tables
-
-table {
-  width: 100%;
-  max-width: 100%;
-  margin-bottom: $line-height-computed;
-  // Cells
-  > thead,
-  > tbody,
-  > tfoot {
-    > tr {
-      > th,
-      > td {
-        padding: $table-cell-padding;
-        line-height: $line-height-base;
-        vertical-align: top;
-      }
-    }
-  }
-  // Bottom align for column headings
-  > thead > tr > th {
-    vertical-align: bottom;
-  }
-  // Remove top border from thead by default
-  > caption + thead,
-  > colgroup + thead,
-  > thead:first-child {
-    > tr:first-child {
-      > th,
-      > td {
-        border-top: 0;
-      }
-    }
-  }
-  // Account for multiple tbody instances
-  > tbody + tbody {
-    border-top: 2px solid $table-border-color;
-  }
-
-  // Nesting
-  table {
-    background-color: $body-bg;
-  }
-
-  // .table-striped functionality
-  > tbody > tr:nth-of-type(odd) {
-    background-color: #f9f9f9;
-  }
-
-  // customer thead color
-  > thead > tr {
-    background-color: #999;
-    color: #fff;
-  }
-
-  > thead > tr > th {
-    font-weight: normal;
-  }
-
-}
-
-img, svg {
-  display: block;
-  margin: 0 auto;
-  max-width: 50%;
-}
-
-.page-content {
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 15px;
-  padding-left: 15px;
-  max-width: 1400px;
-}
+// sitewide links
 
 a, a:hover, a:visited, a:active {
   color: inherit;
@@ -159,7 +102,7 @@ a {
 }
 
 a:visited {
-  border-color: $color-blue;
+  border-color: $color-green;
 }
 
 a:hover {
@@ -168,8 +111,8 @@ a:hover {
 }
 
 a:active {
-  border-color: $color-blue;
-  background-color: $color-blue;
+  border-color: $color-green;
+  background-color: $color-green;
   text-decoration: none;
   position: relative;
   top: 1px;
@@ -179,6 +122,8 @@ a:active {
 a:focus {
   text-decoration: none;
 }
+
+// blockquotes (so far, unused)
 
 blockquote {
   margin: 0;
@@ -199,51 +144,4 @@ blockquote {
     padding-left: 1.5em;
     font-style: italic;
   }
-}
-
-footer {
-  background-color: #3d3d3d;
-  color: #ececec;
-  -webkit-font-smoothing: antialiased;
-}
-
-table.example {
-
-  border: 1px solid $color-blue-light;
-
-  margin-top: 10px;
-
-  > thead > tr {
-    background: $color-blue-deep;
-  }
-
-  > tbody > tr:nth-of-type(odd) {
-    background-color: $color-blue-light;
-  }
-
-  > thead > tr > th, > tbody > tr > td {
-    text-align: center;
-  }
-
-}
-
-table.recommendation {
-
-  > thead > tr {
-    background-color: $color-red-deep;
-  }
-
-  > tbody > tr {
-    background-color: white;
-    border-bottom: 1px solid #eee;
-  }
-
-  > tbody > tr:nth-of-type(odd) {
-
-  }
-
-  .field-row {
-    border-top: 2px solid $color-red-deep;
-  }
-
 }

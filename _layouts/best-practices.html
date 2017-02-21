@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width initial-scale=1">
-    <title>{% if page.title %}{{ page.title }} &sdot; {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
-    <meta name="description" content="placeholder">
-    <link rel="icon" href="{{ "/images/favicon.png" | prepend: site.baseurl }}">
-    <link rel="apple-touch-icon-precomposed" href="{{ "/images/favicon.png" | prepend: site.baseurl }}">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-  </head>
+  {% include head.html %}
   <body>
     {% include nav.html %}
     <section class="page">

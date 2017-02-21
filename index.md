@@ -7,7 +7,7 @@ layout: homepage
       <div class="col-xs-12">
         <h1>General Transit Feed Specification</h1>
       </div>
-      <div class="col-xs-12 col-lg-6">
+      <div class="col-md-10">
 
         <p>The General Transit Feed Specification (GTFS) defines an open standard format for exchanging public transportation schedule, geographic and fare information. GTFS “feeds” let public transit agencies publish data in a format that can be consumed and utilized in applications in an interoperable way.
         
@@ -15,33 +15,14 @@ layout: homepage
         
         <p>GTFS data is available for more than 1350 public transportation providers, and hundreds of applications utilize interoperable GTFS data. This site contains GTFS documentation, best practices, and links to tools.</p>
 
-      </div>
-      
-        <small><a href="gtfs-background/">More GTFS background</a></small>
+        <small><a href="/gtfs-background">More GTFS background</a></small>
 
       </div>
     </div>
   </div>
 </section>
 
-<nav class="navbar col-xs-12">
-  <div class="navbar-header row">
-    <button type="button" data-target="#main-nav" class="navbar-toggle collapsed" data-toggle="collapse" aria-expanded="false">
-      Menu
-    </button>
-  </div>
-
-  <div id="main-nav" class="waypoints navbar-collapse collapse row">
-    <ul class="nav navbar-nav">
-      <li><a href="{{ "/" | prepend: site.baseurl }}"><span>Home</span><div class="dot"></div></a></li>
-      <li><a href="{{ "/getting-started" | prepend: site.baseurl }}">Getting Started<div class="dot"></div></a></li>
-      <li><a href="{{ "/testing" | prepend: site.baseurl }}">Testing Feeds<div class="dot"></div></a></li>
-      <li><a href="{{ "/reference" | prepend: site.baseurl }}">Spec Reference<div class="dot"></div></a></li>
-      <li><a href="{{ "/examples" | prepend: site.baseurl }}">Examples<div class="dot"></div></a></li>
-      <li><a href="{{ "/best-practices" | prepend: site.baseurl }}">Best Practices<div class="dot"></div></a></li>
-    </ul>
-  </div>
-</nav>
+{% include nav.html %}
 
 <section id="how-do-i-start">
   <div class="container">
