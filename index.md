@@ -9,7 +9,11 @@ layout: homepage
       </div>
       <div class="col-xs-12 col-lg-6">
 
-        <p>The General Transit Feed Specification (GTFS) defines an open standard format for exchanging public transportation schedule, geographic and fare information. GTFS “feeds” let public transit agencies publish data in a format that can be consumed and utilized in applications in an interoperable way. The original GTFS format (sometimes referred to as GTFS Static) describes scheduled service. Its companion GTFS Realtime format is used to communicate arrival predictions, vehicle positions, and services advisories. At present, this site is mostly concerned with the GTFS Static format. GTFS data is available for more than 1350 public transportation providers, and hundreds of applications utilize interoperable GTFS data.</p>
+        <p>The General Transit Feed Specification (GTFS) defines an open standard format for exchanging public transportation schedule, geographic and fare information. GTFS “feeds” let public transit agencies publish data in a format that can be consumed and utilized in applications in an interoperable way.
+        
+        <p>The GTFS format (sometimes referred to as GTFS Static) describes scheduled service. Its companion GTFS Realtime format is used to communicate arrival predictions, vehicle positions, and services advisories. At present, this site is mostly concerned with the GTFS Static format.</p><
+        
+        <p>GTFS data is available for more than 1350 public transportation providers, and hundreds of applications utilize interoperable GTFS data. This site contains GTFS documentation, best practices, and links to tools.</p>
 
       </div>
       
