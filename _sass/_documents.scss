@@ -1,0 +1,373 @@
+.document {
+
+  .sidenav {
+    background-color: transparent;
+    font-size: 14px;
+    padding: 10px 0;
+    position: -webkit-sticky;
+    position: sticky;
+    max-height: 95vh;
+    overflow: scroll;
+    top: 1rem;
+
+      .nav .nav {
+        display: none;
+      }
+
+      .nav > .active > .nav {
+        display: block;
+      }
+
+      .active > a {
+        // background-color: $nav-color;
+        // color: white;
+        border-bottom: 3px solid $nav-color;
+      }
+
+      li {
+        background-color: transparent;
+        border: none;
+        padding: 0 15px;
+        margin: 0;
+      }
+
+      .nav .nav li {
+        padding: 0;
+      }
+
+      a {
+        color: #222;
+        border-bottom: 3px solid transparent;
+
+        &:hover {
+          text-decoration: none;
+        }
+
+        &:focus {
+          text-decoration: none;
+        }
+      }
+
+      ul ul {
+        padding-left: 20px;
+      }
+
+      .nav > li > a {
+        padding: 0;
+        padding-top: 4px;
+        padding-left: 10px;
+      }
+  }
+
+  figure {
+    margin: 10px 0;
+    padding: 5px 0;
+    border-top: 2px solid $accent-color;
+    border-bottom: 2px solid $accent-color;
+
+    figcaption {
+      text-align: center;
+      margin: 10px 0;
+      font-style: italic;
+
+      ul {
+        display: inline-block;
+      }
+
+    }
+
+    img, svg {
+      display: block;
+      margin: 0 auto;
+      max-width: 50%;
+    }
+
+  }
+
+  // page title "GTFS Data Best Practices"
+  // h1 {
+  //   color: #666;
+  //   border: none;
+  // }
+
+  // section headline
+  h2 {
+    color: #666;
+    border-bottom: 1px solid #ccc;
+    margin: 40px 0 20px 0;
+  }
+
+  //subsection headline
+  h3 {
+    margin: 20px 0 10px 0;
+  }
+
+  ul > li {
+    margin: 5px 0 10px 0;
+  }
+
+  // quotes from GTFS Specification
+  q {
+    display: block;
+    padding: 10px 20px;
+    font-style: italic;
+    line-height: 2.0;
+    background-color: #e1f5fe;
+    color: #333;
+    margin: 10px 0;
+  }
+
+  q:before,
+    q:after {
+      content: "";
+  }
+
+  #rmi-logo {
+    width: 25%;
+  }
+
+}
+
+.table-wrapper {
+  overflow: auto;
+}
+
+// imported from Bootstrap and applied to all tables
+
+table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: $line-height-computed;
+  // Cells
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        padding: $table-cell-padding;
+        line-height: $line-height-base;
+        vertical-align: top;
+      }
+    }
+  }
+  // Bottom align for column headings
+  > thead > tr > th {
+    vertical-align: bottom;
+  }
+  // Remove top border from thead by default
+  > caption + thead,
+  > colgroup + thead,
+  > thead:first-child {
+    > tr:first-child {
+      > th,
+      > td {
+        border-top: 0;
+      }
+    }
+  }
+  // Account for multiple tbody instances
+  > tbody + tbody {
+    border-top: 2px solid $table-border-color;
+  }
+
+  // Nesting
+  table {
+    background-color: $body-bg;
+  }
+
+  // .table-striped functionality
+  > tbody > tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+  }
+
+  > tbody > tr {
+    border-color: #ddd;
+  }
+
+  // custom thead color
+  > thead > tr {
+    background-color: #ddd;
+    color: black;
+  }
+
+  > thead > tr > th {
+    font-weight: normal;
+  }
+
+}
+
+table.recommendation {
+
+  > thead > tr {
+    background-color: $table-color;
+    color: white;
+  }
+
+  > tbody > tr {
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+  }
+
+  > tbody > tr:nth-of-type(odd) {
+
+  }
+
+  .field-row {
+    border-top: 2px solid $table-color;
+  }
+
+}
+
+// System Tag Feature
+
+.system-tag-interface {
+  position: -webkit-sticky;
+  position: sticky;
+  top: -1px;
+  z-index: 999;
+  background-color: hsla(0, 0%, 95%, 1);
+  border: 1px lightgray solid;
+  display: inline-block;
+  float: right;
+  padding: 7px;
+  border-bottom-left-radius: 8px;
+
+  .system-tag-buttons {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+
+    .system-tag-info {
+      display: block;
+      text-align: center;
+      margin: 2px 0;
+      cursor: help;
+
+      &:hover {
+        background-color: transparent;
+        color: black;
+      }
+    }
+  }
+}
+
+// Some System Tag buttons are not in the interface
+
+.system-tag-button {
+  margin: 2px 0;
+  font-size: 14px;
+
+  &:hover {
+    background-color: $nav-color;
+    color: white;
+  }
+
+  &.highlight:hover {
+    color: black;
+  }
+}
+
+tr.highlight,
+button.highlight {
+  background-color: #ffdd0080 !important;
+}
+
+// .tag {
+//   -webkit-padding-start: 0;
+//   white-space: nowrap;
+//   display: inline-block;
+//   margin: 0.2em 0.1em;
+//   padding: 0 0.5em 0.15em;
+//   @include small-caps;
+//   @include meta;
+//   background-color: #ececec;
+//
+//   a {padding: 0.15em 0;}
+//
+//   a, a:hover, a:visited, a:active {
+//     background-color: inherit;
+//     border: none;
+//     text-decoration: none;
+//   }
+//
+//   &:hover {
+//     background-color: $color-red-deep;
+//     color: white;
+//     text-decoration: none;
+//   }
+//
+//   &:active {
+//     color: white;
+//     background-color: black;
+//     text-decoration: none;
+//   }
+//
+//   &:before {content: none;}
+// }
+
+.anchor-node {
+  position: relative;
+
+  p {
+    transition: 0s all;
+    margin: 0;
+    padding: 0 4px;
+  }
+
+  .anchor-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    transition: 0s all;
+    border: none;
+    padding: 0 5px;
+
+    &:hover {
+      background-color: transparent;
+      color: black;
+    }
+  }
+}
+
+table tr:hover {
+  .anchor-link {
+    visibility: visible;
+  }
+  .anchor-node > p {
+    visibility: hidden;
+  }
+}
+
+
+#realtime {
+
+  .sidenav {
+
+    ul {
+      li {
+        text-indent: 0;
+        list-style: initial;
+      }
+      ul {
+        padding-left: 28px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .document .sidenav {
+    position: relative;
+    display: none;
+  }
+
+  .document .sidenav .nav .nav {
+    display: block;
+  }
+
+  .system-tag-interface {
+    display: none;
+  }
+}

@@ -3,13 +3,28 @@ html {
 }
 
 body {
-  font-family: "Source Sans Pro";
   padding-bottom: 60px;
   min-height: 100%;
   position: relative;
   font-family: $font-sans;
   line-height: 1.3em;
   @include copy;
+  overflow-x: auto;
+}
+
+h1,h2,h3,h4,h5,h6, .nav, .system-tag-info, .system-tag-button {
+    font-family: $font-header;
+    font-weight: 700;
+}
+
+
+h1 {
+  padding-bottom: 5px;
+  border-bottom: 2px solid $accent-color;
+}
+
+ol {
+  margin-bottom: 20px;
 }
 
 .page {
@@ -19,25 +34,18 @@ body {
 .page-content {
   margin-right: auto;
   margin-left: auto;
-  padding-right: 15px;
-  padding-left: 15px;
   max-width: 1400px;
 }
 
 code {
-  color: #333;
+  color: inherit;
   background-color: transparent;
   font-family: "Source Code Pro";
   font-weight: bold;
-}
-
-h1 {
-  padding-bottom: 5px;
-  border-bottom: 2px solid $color-green;
+  padding: 0;
 }
 
 p {
-  // margin: 10px 0;
   line-height: 1.3em;
 }
 
@@ -51,6 +59,20 @@ img, svg {
   max-width: 50%;
 }
 
+.img-link {
+  text-decoration: none;
+  border: none;
+
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+#homepage #gtfs-overview, .nav {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
 //homepage-only styles
 
 #homepage {
@@ -60,6 +82,8 @@ img, svg {
     color: white;
     margin-bottom: 0;
     padding-bottom: 50px;
+    z-index: 150;
+    position: relative;
 
     h1 {
       border: none;
@@ -93,50 +117,30 @@ a, a:hover, a:visited, a:active {
 }
 
 a {
-  border-bottom: 2px solid $color-green;
-}
+  border-bottom: 2px solid $link-color;
+  transition: 0.2s all;
 
-a:visited {
-  border-color: $color-green;
-}
-
-a:hover {
-  background-color: $color-green;
-  border-color: $color-green;
-}
-
-a:active {
-  border-color: $color-green;
-  background-color: $color-green;
-  text-decoration: none;
-  position: relative;
-  top: 1px;
-  right: -1px;
-}
-
-a:focus {
-  text-decoration: none;
-}
-
-// blockquotes (so far, unused)
-
-blockquote {
-  margin: 0;
-  margin-left: 1px;
-  padding: 0;
-  margin-bottom: $copy-line;
-  font-size: initial;
-  border-color: $color-green;
-
-  figcaption {
-    text-align: right;
-    font-size: initial;
+  &:visited {
+    border-color: $link-color;
   }
 
-  figure {
-    margin: 0;
-    padding: 0;
-    padding-left: 1.5em;
-    font-style: italic;
+  &:hover {
+    background-color: $link-color;
+    color: white;
+    border-color: $link-color;
+  }
+
+  &:active {
+    border-color: $link-color;
+    background-color: $link-color;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    top: 1px;
+    right: -1px;
+  }
+
+  &:focus {
+    text-decoration: none;
   }
 }

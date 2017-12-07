@@ -1,24 +1,47 @@
 ---
-layout: default
+layout: reference
+permalink: /reference/
 ---
 
-# GTFS Reference
+{{ site.reference | where: "slug", "introduction" }}
 
-The GTFS reference defines all files, fields, and relationships of GTFS datasets. There are currently two official reference documents:
+## Field Definitions
 
-   * [On GitHub](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md) - This represents the official and most up-to-date version of the Specification, and also shows proposed amendments as [pull requests](https://github.com/google/transit/pulls).
-   * [At developers.google.com](https://developers.google.com/transit/gtfs/reference/) - This version of the Specification is sometimes less up-to-date than that hosted at GitHub, but is translated into multiple languages.
+### agency.txt {#agency}
+{{ site.reference | where: "slug", "agency" }}
 
-## Changing the GTFS Static Spec
+### stops.txt {#stops}
+{{ site.reference | where: "slug", "stops" }}
 
-The GTFS reference documentation is not set in stone. It is an open specification developed and maintained by the community of transit agencies, developers, and other stakeholders who use GTFS. This community of producers and consumers of GTFS data distributes and discusses proposals to extending the spec to enable new capabilities, some of which are implemented in the GTFS reference. To help manage that process, procedures and guidelines have been established. See [GTFS Amendment Process](https://github.com/google/transit/blob/master/gtfs/CHANGES.md).
+### routes.txt {#routes}
+{{ site.reference | where: "slug", "routes" }}
 
-### Important links:
+### trips.txt {#trips}
+{{ site.reference | where: "slug", "trips" }}
 
-* [Open change proposals on GitHub](https://github.com/google/transit/pulls)
-* [Accepted (merged) change proposals on GitHub](https://github.com/google/transit/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Amerged)
-* [gtfs-changes Google Group](https://groups.google.com/forum/#!forum/gtfs-changes) where change proposals on Github are announced
+### stop_times.txt {#stop_times}
+{{ site.reference | where: "slug", "stop_times" }}
 
-### Archive links:
+### calendar.txt {#calendar}
+{{ site.reference | where: "slug", "calendar" }}
 
-* Archived [directory](https://sites.google.com/site/gtfschanges/) and [discussions](https://groups.google.com/forum/#!topic/gtfs-changes/C5dgsKGkpDA) of change proposals prior to adopting Github as a proposal management platform
+### calendar_dates.txt {#calendar_dates}
+{{ site.reference | where: "slug", "calendar_dates" }}
+
+### fare_attributes.txt {#fare_attributes}
+{{ site.reference | where: "slug", "fare_attributes" }}
+
+### fare_rules.txt {#fare_rules}
+{{ site.reference | where: "slug", "fare_rules" }}
+
+### shapes.txt {#shapes}
+{{ site.reference | where: "slug", "shapes" }}
+
+### frequencies.txt {#frequencies}
+{{ site.reference | where: "slug", "frequencies" }}
+
+### transfers.txt {#transfers}
+{{ site.reference | where: "slug", "transfers" }}
+
+### feed_info.txt {#feed_info}
+{{ site.reference | where: "slug", "feed_info" }}

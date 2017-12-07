@@ -1,23 +1,215 @@
 .navbar {
   border-radius: 0;
   text-align: center;
-  background-color: $nav-color;
-  border-bottom: 4px solid black;
+  border: none;
   padding: 0;
   z-index: 100;
+  margin-bottom: 0;
+
+  .caret {
+    border-width: 6px;
+    margin-left: 6px;
+    margin-bottom: 3px;
+  }
+}
+
+#main-nav {
+  border-bottom: 4px solid black;
+  background-color: $nav-color;
+  z-index: 1;
+}
+
+#mobile-nav {
+
+  padding-left: 0;
+  padding-right: 0;
+
+  a {
+    background-color: transparent;
+    color: white;
+  }
+
+  li {
+    border-bottom: 1px solid black;
+    margin: 0;
+    padding: 5px 0;
+  }
+}
+
+a.no-link {
+  cursor: pointer;
 }
 
 .nav a {
-  color: #000;
+  color: white;
+  border: none;
 }
 
-.nav > li > a:hover {
+.nav a:hover {
+  color: black;
   background-color: transparent;
+  border: none;
 }
 
 .navbar-nav {
   display: inline-block;
   float: none;
+  vertical-align: bottom;
+  bottom: -4px;
+  position: relative;
+}
+
+.waypoints {
+
+  & > ul > li {
+
+    margin: 0;
+
+    & > a {
+      border-bottom: none;
+      padding: 20px 25px 15px 25px;
+      color: white;
+      font-size: 18px;
+
+      &:hover,
+      &:focus {
+        color: black;
+        background-color: transparent;
+      }
+    }
+  }
+
+  .dot {
+    @include dot;
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    height: 12px;
+    width: 12px;
+    bottom: -5px;
+    border-width: 3px;
+    z-index: 10;
+  }
+}
+
+.dropdown-list {
+  position: absolute;
+  left: 50%;
+  padding: 0;
+  margin: 0;
+  z-index: -1;
+  transform: translateY(-200%);
+  opacity: 0;
+  transition: 0.2s all;
+  list-style: none;
+  background-color: transparent;
+  pointer-events: none;
+
+  &:before {
+    content: '';
+    position: absolute;
+    height: 300%;
+    width: 4px;
+    background-color: black;
+    left: -2px;
+    bottom: 0;
+  }
+
+  & > li {
+    white-space: nowrap;
+    display: block;
+    position: relative;
+    text-align: left;
+    background-color: transparent;
+    transform: translateY(50%);
+
+    &:hover {
+
+      & > a {
+        background-color: $nav-color;
+        color: white;
+      }
+
+      & > a:before {
+        border-right-color: $nav-color;
+      }
+
+    }
+
+    & > .dot {
+      display: inline-block;
+      vertical-align: middle;
+      left: -6px;
+      bottom: 0;
+    }
+  }
+
+  & > li > a {
+    position: relative;
+    font-size: 18px;
+    color: black;
+    padding: 10px 10px 10px 0;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #ddd;
+    margin-left: 15px;
+    white-space: nowrap;
+
+    &:before {
+      content: '';
+      position: absolute;
+      right: 100%;
+      top: 0;
+      height: 0;
+      width: 0;
+      border: 20px solid transparent;
+      border-right: 20px solid #ddd;
+      transition: 0.2s all;
+    }
+
+  }
+
+}
+
+.sub-dropdown-list {
+  left: -24px;
+
+  .dropdown-list-dot {
+    top: -2px;
+    left: -6px;
+    position: absolute;
+    z-index: initial;
+
+    &:before {
+      content: '';
+      height: 30px;
+      width: 4px;
+      position: absolute;
+      bottom: 0;
+      left: 13px;
+      z-index: -5;
+      background-color: black;
+      transform: rotateZ(45deg);
+    }
+  }
+}
+
+.dropdown-link {
+
+  button {
+    color: white;
+    font-size: 18px;
+    padding: 20px 25px 15px 25px;
+    display: block;
+    background-color: transparent;
+    border: none;
+  }
+
+  &:hover > .dropdown-list {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+  }
 }
 
 .navbar-toggle {
@@ -26,87 +218,58 @@
   padding: 15px 0;
   width: 100%;
   border: none;
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid black;
   border-radius: 0;
   color: white;
 }
 
-.waypoints {
+// fix to get early navbar-collapse
 
-  ul {
-    position: relative;
-
-  }
-
-  ul > li {
-
-    margin: 0;
-
-    a {
-      border-bottom: none;
-      padding: 20px 30px 5px 30px;
-      color: white;
-      font-size: 18px;
-
-      &:hover {
-        color: black;
-
-
-    }
-
-      .dot {
-        @include dot;
-        display: block;
-        position: relative;
-        margin: 0 auto;
-        height: 12px;
-        width: 12px;
-        bottom: -17px;
-        border-width: 3px;
-        z-index: 10;
-      }
-    }
+@media (min-width: 851px) {
+  #mobile-nav {
+    display: none !important;
   }
 }
 
-// fix to get early navbar-collapse
+@media (max-width: 850px) {
 
-@media (max-width: 1020px) {
     .navbar-header {
         float: none;
+        background-color: $nav-color;
     }
-    .navbar-left,.navbar-right {
-        float: none !important;
-    }
+
     .navbar-toggle {
         display: block;
     }
+
     .navbar-collapse {
         border-top: 1px solid transparent;
         box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
     }
-    .navbar-fixed-top {
-        top: 0;
-        border-width: 0 0 1px;
-    }
+
     .navbar-collapse.collapse {
         display: none!important;
     }
+
     .navbar-nav {
         float: none!important;
         margin-top: 7.5px;
     }
-    .navbar-nav>li {
+
+    .navbar-nav > li {
         float: none;
     }
-    .navbar-nav>li>a {
+
+    .navbar-nav > li > a {
         padding-top: 10px;
         padding-bottom: 10px;
     }
-    .collapse.in{
+
+    .collapse.in {
         display: block !important;
     }
+
     .waypoints .dot {
-      display: none!important;
+      display: none !important;
     }
 }

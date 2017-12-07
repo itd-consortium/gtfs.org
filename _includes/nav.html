@@ -1,18 +1,44 @@
 <nav class="navbar col-xs-12">
-  <div class="navbar-header row">
-    <button type="button" data-target="#main-nav" class="navbar-toggle collapsed" data-toggle="collapse" aria-expanded="false">
+  <div class="navbar-header">
+    <button type="button" data-target="#mobile-nav" class="navbar-toggle collapse" data-toggle="collapse" aria-expanded="false">
       MENU
     </button>
+    <div id="mobile-nav" class="navbar-collapse collapse">
+      <ul class="nav">
+        <li><a href="{{ "/" | prepend: site.baseurl }}">GTFS HOME</a></li>
+        <li><a href="{{ "/getting-started/" | prepend: site.baseurl }}">GETTING STARTED</a></li>
+        <li><a href="{{ "/examples/" | prepend: site.baseurl }}">EXAMPLES</a></li>
+        <li><a href="{{ "/testing/" | prepend: site.baseurl }}">TESTING FEEDS</a></li>
+        <li><a href="{{ "/realtime/" | prepend: site.baseurl }}">GTFS REALTIME</a></li>
+        <li><a href="{{ "/reference/" | prepend: site.baseurl }}">CORE REFERENCE</a></li>
+        <li><a href="{{ "/best-practices/" | prepend: site.baseurl }}">BEST PRACTICES</a></li>
+        <li><a href="{{ "/merged-view/" | prepend: site.baseurl }}">MERGED VIEW</a></li>
+      </ul>
+    </div>
   </div>
 
   <div id="main-nav" class="waypoints navbar-collapse collapse">
     <ul class="nav navbar-nav">
-      <li><a href="{{ "/" | prepend: site.baseurl }}"><span>GTFS HOME</span><div class="dot"></div></a></li>
-      <li><a href="{{ "/getting-started" | prepend: site.baseurl }}">GETTING STARTED<div class="dot"></div></a></li>
-      <li><a href="{{ "/reference" | prepend: site.baseurl }}">SPEC REFERENCE<div class="dot"></div></a></li>
-      <li><a href="{{ "/best-practices" | prepend: site.baseurl }}">BEST PRACTICES<div class="dot"></div></a></li>
-      <li><a href="{{ "/examples" | prepend: site.baseurl }}">EXAMPLES<div class="dot"></div></a></li>
-      <li><a href="{{ "/testing" | prepend: site.baseurl }}">TESTING FEEDS<div class="dot"></div></a></li>
+      <li><a href="{{ "/" | prepend: site.baseurl }}">GTFS HOME</a><div class="dot"></div></li>
+      <li class="dropdown-link"><a href="{{ "/getting-started/" | prepend: site.baseurl }}">GETTING STARTED</a><div class="dot"></div>
+        <ul class="dropdown-list">
+          <li><div class="dot"></div><a href="{{ "/examples/" | prepend: site.baseurl }}">EXAMPLES</a></li>
+        </ul>
+      </li>
+      <li class="dropdown-link"><a href="#void">SPEC DOCUMENTATION<span class="caret"></span></a><div class="dot"></div>
+        <ul class="dropdown-list">
+          <li><div class="dot"></div><a href="{{ "/realtime/" | prepend: site.baseurl }}">GTFS REALTIME</a></li>
+          <li class="dropdown-link"><div class="dot"></div><a href="#void" class="no-link">GTFS (STATIC)<span class="caret"></span></a>
+            <ul class="dropdown-list sub-dropdown-list">
+              <li><div class="dot"></div><a href="{{ "/reference/" | prepend: site.baseurl }}">CORE REFERENCE</a></li>
+              <li><div class="dot"></div><a href="{{ "/best-practices/" | prepend: site.baseurl }}">BEST PRACTICES</a></li>
+              <li><div class="dot"></div><a href="{{ "/merged-view/" | prepend: site.baseurl }}">MERGED VIEW</a></li>
+              <div class="dot dropdown-list-dot"></div>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="{{ "/testing/" | prepend: site.baseurl }}">TESTING FEEDS</a><div class="dot"></div></li>
     </ul>
   </div>
 </nav>

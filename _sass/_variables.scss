@@ -1,9 +1,14 @@
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic,600italic|Source+Code+Pro:400,700);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic,600italic|Source+Code+Pro:400,700|Nunito+Sans:400,600);
 
 
 $font-sans: "Source Sans Pro", sans-serif;
 $font-serif: "Source Serif Pro", Georgia;
+$font-header: "Proxima Nova", "Nunito Sans", sans-serif;
 
+$link-color: rgb(19, 138, 150);
+$accent-color: rgb(19, 138, 150);
+$nav-color: rgb(19, 138, 150);
+$table-color: rgb(19, 138, 150);
 
 $color-graublau-dark: #365354;
 $color-blue-dark:     #12486c;
@@ -40,8 +45,6 @@ $color-orange-light: #ffb469;
 $color-orange: #ff8834;
 $color-orange-deep: #ff6c00;
 $color-orange-special: #FF841C;
-
-$nav-color: #07b57a;
 
 $meta-size: 12px;
 

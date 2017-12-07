@@ -1,0 +1,24 @@
+version: 2
+jobs:
+  build:
+    machine: true
+    steps:
+      - checkout
+      - run: bundle install
+      - run:
+          name: Clone Best Practices repo
+          command: git clone git@github.com:itd-consortium/gtfs-best-practices.git _best-practices/
+      - run:
+          name: Clone Core Reference repo
+          command: git clone git@github.com:itd-consortium/gtfs-reference.git _reference/
+      - run:
+          name: Clone Realtime Reference repo
+          command: git clone git@github.com:itd-consortium/gtfs-realtime.git realtime/
+      - run: bundle exec jekyll build
+      - deploy:
+          name: If master, deploy to S3
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              aws s3 sync _site s3://gtfs.org/ --delete
+            fi
+

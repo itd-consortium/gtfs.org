@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body>
+    {% include nav.html %}
+    <section class="page">
+      <div id="realtime" class="document page-content clearfix">
+        <div class="col-md-3 col-xs-12 sidenav">
+          <ul class="list-group">
+            <li class="list-group-item"><a href="#message-feedmessage">Feed Message</a></li>
+            <ul>
+              <li><a href="#message-feedheader">FeedHeader</a></li>
+              <ul>
+                <li><a href="#enum-incrementality">Incrementality</a></li>
+              </ul>
+              <li><a href="#message-feedentity">FeedEntity</a></li>
+              <ul>
+                <li><a href="#message-tripupdate">TripUpdate</a></li>
+                <ul>
+                  <li><a href="#message-tripdescriptor">TripDescriptor</a></li>
+                  <ul>
+                    <li><a href="#enum-schedulerelationship-1">ScheduleRelationship</a></li>
+                  </ul>
+                  <li><a href="#message-vehicledescriptor">VehicleDescriptor</a></li>
+                  <li><a href="#message-stoptimeupdate">StopTimeUpdate</a></li>
+                  <ul>
+                    <li><a href="#message-stoptimeevent">StopTimeEvent</a></li>
+                    <li><a href="#enum-schedulerelationship">ScheduleRelationship</a></li>
+                  </ul>
+                </ul>
+                <li><a href="#message-vehicleposition">VehiclePosition</a></li>
+                <ul>
+                  <li><a href="#message-tripdescriptor">TripDescriptor</a></li>
+                  <ul>
+                    <li><a href="#enum-schedulerelationship-1">ScheduleRelationship</a></li>
+                  </ul>
+                  <li><a href="#message-vehicledescriptor">VehicleDescriptor</a></li>
+                  <li><a href="#message-position">Position</a></li>
+                  <li><a href="#enum-vehiclestopstatus">VehicleStopStatus</a></li>
+                  <li><a href="#enum-congestionlevel">CongestionLevel</a></li>
+                  <li><a href="#enum-occupancystatus">OccupancyStatus</a></li>
+                </ul>
+                <li><a href="#message-alert">Alert</a></li>
+                <ul>
+                  <li><a href="#message-timerange">TimeRange</a></li>
+                  <li><a href="#message-entityselector">EntitySelector</a></li>
+                  <ul>
+                    <li><a href="#message-tripdescriptor">TripDescriptor</a></li>
+                    <ul>
+                      <li><a href="#enum-schedulerelationship-1">ScheduleRelationship</a></li>
+                    </ul>
+                  </ul>
+                  <li><a href="#enum-cause">Cause</a></li>
+                  <li><a href="#enum-effect">Effect</a></li>
+                  <li><a href="#message-translatedstring">TranslatedString</a></li>
+                  <ul>
+                    <li><a href="#message-translation">Translation</a></li>
+                  </ul>
+                </ul>
+              </ul>
+            </ul>
+          </ul>
+        </div>
+        <div class="col-lg-8 col-md-9 col-xs-12">
+          {{ content }}
+        </div>
+      </div>
+    </section> <!-- page -->
+    {% include footer.html %}
+  </body>
+</html>
