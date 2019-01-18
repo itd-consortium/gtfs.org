@@ -29,5 +29,10 @@
 .container li {
   margin-bottom: 7px;
   max-width: 200px;
-
 }
+
+.versionSelectForm label {
+  padding-right: 10px;
+  font-weight: bold;
+}
+

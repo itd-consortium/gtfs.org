@@ -97,13 +97,14 @@ export default class DocPage extends React.Component {
   }
 
   render() {
-    const showName = (this.pageName === "Realtime Reference");
+    const showName = (this.pageName === "Realtime Reference v2" || this.pageName === "Realtime Reference v1");
     let pageYOffset = this.state.pageYOffset;
     return(
       <Layout>
-      <div className={styles.container}>
+        <div className={styles.container}>
           <div className={styles.navContainer}>
             <SideNav
+              pageName={this.pageName}
               content={this.pageContents}
               route={this.props.location.pathname}
               currentOffset={pageYOffset}

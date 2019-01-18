@@ -102,8 +102,15 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
 }
 
 exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions;
+  const { createPage, createRedirect } = actions;
   const contentDictionary = {};
+
+  createRedirect({
+    fromPath: '/realtime', 
+    toPath: '/realtime/v2', 
+    isPermanent: true
+  });
+
   pageConfig.pages.forEach((page) => {
     createPage({
       path: page.url,

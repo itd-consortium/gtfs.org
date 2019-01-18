@@ -34,15 +34,22 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        path: `${__dirname}/src/pages/reference/gtfs/spec/en`,
+        path: `${__dirname}/src/pages/reference/v2/gtfs/spec/en`,
         name: "Static Reference"
       }
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        path: `${__dirname}/src/pages/reference/gtfs-realtime/spec/en`,
-        name: "Realtime Reference"
+        path: `${__dirname}/src/pages/reference/v2/gtfs-realtime/spec/en`,
+        name: "Realtime Reference v2"
+      }
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `${__dirname}/src/pages/reference/v1/gtfs-realtime/spec/en`,
+        name: "Realtime Reference v1"
       }
     },
     {
@@ -83,7 +90,7 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        path: `${__dirname}/src/pages/reference/gtfs/CHANGES.md`,
+        path: `${__dirname}/src/pages/reference/v2/gtfs/CHANGES.md`,
         name: "Changes"
       }
     },
@@ -124,6 +131,7 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline',
-    'gatsby-plugin-catch-links'
+    'gatsby-plugin-catch-links',
+    'gatsby-plugin-meta-redirect'
   ],
 }

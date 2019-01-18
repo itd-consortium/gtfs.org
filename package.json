@@ -9,6 +9,7 @@
     "gatsby-cli": "^2.4.5",
     "gatsby-plugin-catch-links": "^2.0.5",
     "gatsby-plugin-manifest": "2.0.5",
+    "gatsby-plugin-meta-redirect": "^1.1.1",
     "gatsby-plugin-offline": "^2.0.5",
     "gatsby-plugin-react-helmet": "^3.0.0",
     "gatsby-plugin-sharp": "2.0.5",
@@ -46,7 +47,7 @@
     "develop": "gatsby develop",
     "format": "prettier --write '**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "fetchdata": "git clone https://github.com/google/transit src/pages/reference && git clone https://github.com/MobilityData/gtfs-best-practices -b docsv2 --single-branch src/pages/best-practices"
+    "fetchdata": "git clone https://github.com/google/transit src/pages/reference/v2 && git clone https://github.com/google/transit src/pages/reference/v1 && git -C src/pages/reference/v1 reset eb4b243513abdca8efeaefbf8c264d9d1072ffb6 --hard && git clone https://github.com/MobilityData/gtfs-best-practices -b docsv2 --single-branch src/pages/best-practices"
   },
   "devDependencies": {
     "prettier": "^1.14.2"

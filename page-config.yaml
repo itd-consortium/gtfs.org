@@ -12,7 +12,7 @@ docs_nav:
   - title: Static
     description: Reference for core comma-separated values specification to describe stops, routes, schedules, and fares
     link: /reference
-  - title: Realtime
+  - title: Realtime Reference v2
     description: Reference for protobuf-based GTFS extension to provide arrival estimates, vehicle positions, and service alerts
     link: /realtime
   - title: Best Practices
@@ -50,59 +50,113 @@ pages:
       - name: transfers.txt
       - name: feed_info.txt
 
-  - title: Realtime Reference
-    url: /realtime
+  - title: Realtime Reference v2
+    url: /realtime/v2
     template: doc-page
     sidemenu:
     - name: Feed Message
-      anchor: /realtime/#message-feedmessage
+      anchor: /realtime/v2/#message-feedmessage
       slug: reference
       children:
       - name: Feed Header
-        anchor: /realtime/#message-feedheader
+        anchor: /realtime/v2/#message-feedheader
         children:
         - name: Incrementality
-          anchor: /realtime/#enum-incrementality
+          anchor: /realtime/v2/#enum-incrementality
       - name: Feed Entity
-        anchor: /realtime/#message-feedentity
+        anchor: /realtime/v2/#message-feedentity
         children:
         - name:	Trip Update
-          anchor: /realtime/#message-tripupdate
+          anchor: /realtime/v2/#message-tripupdate
           children:
             - name: Trip Descriptor
-              anchor: /realtime/#message-tripdescriptor
+              anchor: /realtime/v2/#message-tripdescriptor
             - name: Vehicle Descriptor
-              anchor: /realtime/#message-vehicledescriptor
+              anchor: /realtime/v2/#message-vehicledescriptor
             - name: Stop Time Update
-              anchor: /realtime/#message-stoptimeupdate
+              anchor: /realtime/v2/#message-stoptimeupdate
         - name: Vehicle Position
-          anchor: /realtime/#message-vehicleposition
+          anchor: /realtime/v2/#message-vehicleposition
           children:
             - name: Trip Descriptor
-              anchor: /realtime/#message-tripdescriptor
+              anchor: /realtime/v2/#message-tripdescriptor
             - name: Vehicle Descriptor
-              anchor: /realtime/#message-vehicledescriptor
+              anchor: /realtime/v2/#message-vehicledescriptor
             - name: Position
-              anchor: /realtime/#message-position
+              anchor: /realtime/v2/#message-position
             - name: Vehicle Stop Status
-              anchor: /realtime/#enum-vehiclestopstatus
+              anchor: /realtime/v2/#enum-vehiclestopstatus
             - name: Congestion Level
-              anchor: /realtime/#enum-congestionlevel
+              anchor: /realtime/v2/#enum-congestionlevel
             - name: Occupancy Status
-              anchor: /realtime/#enum-occupancystatus
+              anchor: /realtime/v2/#enum-occupancystatus
         - name: Alert
-          anchor: /realtime/#message-alert
+          anchor: /realtime/v2/#message-alert
           children:
             - name: Time Range
-              anchor: /realtime/#message-timerange
+              anchor: /realtime/v2/#message-timerange
             - name: Entity Selector
-              anchor: /realtime/#message-entityselector
+              anchor: /realtime/v2/#message-entityselector
             - name: Cause
-              anchor: /realtime/#enum-cause
+              anchor: /realtime/v2/#enum-cause
             - name: Effect
-              anchor: /realtime/#enum-effect
+              anchor: /realtime/v2/#enum-effect
             - name: Translated String
-              anchor: /realtime/#message-translatedstring
+              anchor: /realtime/v2/#message-translatedstring
+
+  - title: Realtime Reference v1
+    url: /realtime/v1
+    template: doc-page
+    sidemenu:
+    - name: Feed Message
+      anchor: /realtime/v1/#message-feedmessage
+      slug: reference
+      children:
+      - name: Feed Header
+        anchor: /realtime/v1/#message-feedheader
+        children:
+        - name: Incrementality
+          anchor: /realtime/v1/#enum-incrementality
+      - name: Feed Entity
+        anchor: /realtime/v1/#message-feedentity
+        children:
+        - name:	Trip Update
+          anchor: /realtime/v1/#message-tripupdate
+          children:
+            - name: Trip Descriptor
+              anchor: /realtime/v1/#message-tripdescriptor
+            - name: Vehicle Descriptor
+              anchor: /realtime/v1/#message-vehicledescriptor
+            - name: Stop Time Update
+              anchor: /realtime/v1/#message-stoptimeupdate
+        - name: Vehicle Position
+          anchor: /realtime/v1/#message-vehicleposition
+          children:
+            - name: Trip Descriptor
+              anchor: /realtime/v1/#message-tripdescriptor
+            - name: Vehicle Descriptor
+              anchor: /realtime/v1/#message-vehicledescriptor
+            - name: Position
+              anchor: /realtime/v1/#message-position
+            - name: Vehicle Stop Status
+              anchor: /realtime/v1/#enum-vehiclestopstatus
+            - name: Congestion Level
+              anchor: /realtime/v1/#enum-congestionlevel
+            - name: Occupancy Status
+              anchor: /realtime/v1/#enum-occupancystatus
+        - name: Alert
+          anchor: /realtime/v1/#message-alert
+          children:
+            - name: Time Range
+              anchor: /realtime/v1/#message-timerange
+            - name: Entity Selector
+              anchor: /realtime/v1/#message-entityselector
+            - name: Cause
+              anchor: /realtime/v1/#enum-cause
+            - name: Effect
+              anchor: /realtime/v1/#enum-effect
+            - name: Translated String
+              anchor: /realtime/v1/#message-translatedstring
 
   - title: Best Practices
     url: /best-practices
