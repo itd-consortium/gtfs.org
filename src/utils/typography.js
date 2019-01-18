@@ -1,6 +1,5 @@
 import Typography from "typography"
 import githubTheme from "typography-theme-github"
-import overrideThemeStyles from "typography"
 
 // githubTheme.blockMarginBottom = '50px';
 

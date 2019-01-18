@@ -74,8 +74,9 @@ export default class Header extends React.Component {
                   <Icon className={styles.up} size="small" name="chevron up"/>
                   : <Icon size="small" name="chevron down"/>}
                   </div>
-                  {data.allNav.edges[0].node.contents.map((item) => (
+                  {data.allNav.edges[0].node.contents.map((item, index) => (
                     <Link
+                      key={index}
                       to={item.link}
                       activeClassName={styles.activePage}
                     >

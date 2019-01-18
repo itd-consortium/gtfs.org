@@ -88,30 +88,30 @@ class SideNav extends React.Component {
   render() {
     const { content } = this.props
     return(
-        <div className={styles.container}>
-            {content.map((section,index) =>
-              <div key={index}>
-                <li><Link to={section.anchor} style={this.styleIfActive(section.anchor)}>{section.name}</Link></li>
-                <div style={{ marginLeft: 10 }}>
-                  {section.children && section.children.map((firstChild,indexTwo) =>
-                    <li key={indexTwo}>
-                      <Link to={firstChild.anchor} style={this.styleIfActive(firstChild.anchor)}>{firstChild.name}</Link>
-                        {firstChild.children && firstChild.children.map((secondChild, indexThree) =>
-                          <div style={{ marginLeft: 10 }}>
-                            <li key={indexThree}><Link to={secondChild.anchor} style={this.styleIfActive(secondChild.anchor)}>{secondChild.name}</Link></li>
-                              {secondChild.children && secondChild.children.map((thirdChild) =>
-                                <li style={{ marginLeft: 10 }}><Link to={thirdChild.anchor} style={this.styleIfActive(thirdChild.anchor)}>{thirdChild.name}</Link></li>
-                              )}
-                          </div>
-                        )}
-                    </li>
-                  )}
-                </div>
-              </div>
-            )}
+      <div className={styles.container}>
+        {content.map((section, index) =>
+          <div key={index}>
+            <li><Link to={section.anchor} style={this.styleIfActive(section.anchor)}>{section.name}</Link></li>
+            <div style={{ marginLeft: 10 }}>
+              {section.children && section.children.map((firstChild, index) =>
+                <li key={index}>
+                  <Link to={firstChild.anchor} style={this.styleIfActive(firstChild.anchor)}>{firstChild.name}</Link>
+                    {firstChild.children && firstChild.children.map((secondChild, index) =>
+                      <div  key={index} style={{ marginLeft: 10 }}>
+                        <li><Link to={secondChild.anchor} style={this.styleIfActive(secondChild.anchor)}>{secondChild.name}</Link></li>
+                          {secondChild.children && secondChild.children.map((thirdChild, index) =>
+                            <li key={index} style={{ marginLeft: 10 }}><Link to={thirdChild.anchor} style={this.styleIfActive(thirdChild.anchor)}>{thirdChild.name}</Link></li>
+                          )}
+                      </div>
+                    )}
+                </li>
+              )}
+            </div>
           </div>
-        )
-      }
+        )}
+      </div>
+    )
+  }
 }
 
 export default SideNav
