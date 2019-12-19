@@ -74,21 +74,3 @@ else
 fi
 # Copy images
 find repos/best-practices/en -name \*.svg -exec cp {} src/pages/en/best-practices \;
-
-mkdir -p src/pages/es/best-practices
-PAGE=src/pages/es/best-practices/index.md
-rm -f $PAGE
-touch $PAGE
-echo -en "---\npath: /es/best-practices/\nlang: es\ntemplate: doc-page\n---\n$(cat $PAGE)" > $PAGE
-for i in "${BEST_PRACTICES_FILES[@]}"
-do
-    cat repos/best-practices/es/$i.md >> $PAGE
-done
-# Remove existing lang tags
-if [ "${OSTYPE//[0-9.]/}" == "darwin" ]; then
-    sed -i '' -e ':a' -e 'N' -e '$!ba' -e 's/---\nlang: es\n\n---/ /g' $PAGE
-else
-    sed -i -e ':a' -e 'N' -e '$!ba' -e 's/---\nlang: es\n\n---/ /g' $PAGE
-fi
-# Copy images
-find repos/best-practices/es -name \*.svg -exec cp {} src/pages/es/best-practices \;
