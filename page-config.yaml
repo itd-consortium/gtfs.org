@@ -35,7 +35,9 @@ pages:
           - name: transfers.txt
           - name: pathways.txt
           - name: levels.txt
+          - name: translations.txt
           - name: feed_info.txt
+          - name: attributions.txt
 
   - title: GTFS Realtime Reference v2
     path: /reference/realtime/v2/
