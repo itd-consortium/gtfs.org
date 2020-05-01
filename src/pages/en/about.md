@@ -14,7 +14,7 @@ Thank you to <a href="https://www.linkedin.com/in/byrdandrew">Andrew Byrd</a> fo
 
 # Relation with MobilityData
 
-gtfs.org is is maintained by MobilityData, a project which aims to the broaden adoption and increase the functionality of the GTFS data format. The MobilityData team includes a number of transportation thinkers and technical experts. More information can be found at [https://mobilitydata.org/](ttps://mobilitydata.org/)
+gtfs.org is is maintained by MobilityData, a project which aims to the broaden adoption and increase the functionality of the GTFS data format. The MobilityData team includes a number of transportation thinkers and technical experts. More information can be found at [https://mobilitydata.org/](https://mobilitydata.org/)
 
 The MobilityData project is incubated by the [Rocky Mountain Institute](https://www.rmi.org/), an independent nonprofit that works to transform global energy use to create a clean, prosperous, and secure low-carbon future. 
 
