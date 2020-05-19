@@ -1,4 +1,3 @@
-
 #!/usr/bin/env bash
 
 # Exit script if you try to use an uninitialized variable.
@@ -57,7 +56,7 @@ echo -en "---\npath: /es/reference/realtime/v1/\nlang: es\ntemplate: doc-page\n-
 # Best Practices -- !! master branch of MobilityData/gtfs-best-practices is for *staging*.
 #TODO: clone appropriate branch depending on master(staging)/production context
 git clone https://github.com/MobilityData/gtfs-best-practices.git -b master --single-branch repos/best-practices
-BEST_PRACTICES_FILES=(introduction faq publishing all-files agency stops routes trips stop_times calendar calendar_dates fare_attributes fare_rules shapes feed_info frequencies transfers loop-routes lasso-routes branches about)
+BEST_PRACTICES_FILES=(introduction all-files agency stops routes trips stop_times calendar calendar_dates fare_attributes fare_rules shapes feed_info frequencies transfers loop-routes lasso-routes branches about)
 
 mkdir -p src/pages/en/best-practices
 PAGE=src/pages/en/best-practices/index.md
@@ -76,21 +75,3 @@ else
 fi
 # Copy images
 find repos/best-practices/en -name \*.svg -exec cp {} src/pages/en/best-practices \;
-
-mkdir -p src/pages/es/best-practices
-PAGE=src/pages/es/best-practices/index.md
-rm -f $PAGE
-touch $PAGE
-echo -en "---\npath: /es/best-practices/\nlang: es\ntemplate: doc-page\n---\n$(cat $PAGE)" > $PAGE
-for i in "${BEST_PRACTICES_FILES[@]}"
-do
-    cat repos/best-practices/es/$i.md >> $PAGE
-done
-# Remove existing lang tags
-if [ "${OSTYPE//[0-9.]/}" == "darwin" ]; then
-    sed -i '' -e ':a' -e 'N' -e '$!ba' -e 's/---\nlang: es\n\n---/ /g' $PAGE
-else
-    sed -i -e ':a' -e 'N' -e '$!ba' -e 's/---\nlang: es\n\n---/ /g' $PAGE
-fi
-# Copy images
-find repos/best-practices/es -name \*.svg -exec cp {} src/pages/es/best-practices \;
