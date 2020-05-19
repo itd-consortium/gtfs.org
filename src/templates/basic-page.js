@@ -9,7 +9,6 @@ export default function Template({ data, location }) {
     const {html, frontmatter} = markdownRemark
     const {lang} = frontmatter
 
-
     return (
         <Layout lang={lang} location={location}>
             <div className={`${styles.basicPageContainer} container`}>
