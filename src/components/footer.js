@@ -12,6 +12,7 @@ const Footer = (props) => {
     <div className={[styles[className], styles.footer].join(' ')}>
       <div className="container">
         <div className={styles.footerCredits}>
+          <Link to={getPathForLanguage('/about', i18n.language)}>{t('menu:About')}</Link>
           <Link to={getPathForLanguage('/license', i18n.language)}>{t('menu:License')}</Link>
           <a href="https://mobilitydata.org/">{t('menu:MobilityData')}</a>
         </div>

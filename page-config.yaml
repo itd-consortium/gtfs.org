@@ -1,4 +1,3 @@
-
 nav:
   - display: Home
     link: /
@@ -15,9 +14,9 @@ nav:
   - display: Best Practices
     link: /best-practices/
   - display: Extensions
-    link: /extensions/  
+    link: /extensions/
   - display: Changes
-    link: /changes/  
+    link: /changes/
 
 pages:
   - title: Static Reference
