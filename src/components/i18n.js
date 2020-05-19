@@ -41,7 +41,7 @@ i18next
     resources,
     fallbackLng: false,
 
-    preload: langs,
+    // preload: langs,
 
     keySeparator: false, // we do not use keys in form messages.welcome
 
