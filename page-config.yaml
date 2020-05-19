@@ -1,15 +1,22 @@
 nav:
   - display: Home
     link: /
-  - display: Documentation
-    link: /documentation/
-  - display: Datasets
-    link: /datasets/
-  - display: Guides & Tools
-    link: /guides/
-  - display: About
-    link: /about/
-
+  - display: Static
+    link: /reference/static
+  - display: Realtime
+    link: /reference/realtime/v2/
+  - display: Getting Started
+    link: /getting-started/
+  - display: Examples
+    link: /examples/
+  - display: Testing Feeds
+    link: /testing/
+  - display: Best Practices
+    link: /best-practices/
+  - display: Extensions
+    link: /extensions/
+  - display: Changes
+    link: /changes/
 
 pages:
   - title: Static Reference
@@ -35,9 +42,7 @@ pages:
           - name: transfers.txt
           - name: pathways.txt
           - name: levels.txt
-          - name: translations.txt
           - name: feed_info.txt
-          - name: attributions.txt
 
   - title: GTFS Realtime Reference v2
     path: /reference/realtime/v2/
@@ -53,7 +58,7 @@ pages:
           - name: Feed Entity
             anchor: /reference/realtime/v2/#message-feedentity
             children:
-              - name:    Trip Update
+              - name:	Trip Update
                 anchor: /reference/realtime/v2/#message-tripupdate
                 children:
                   - name: Trip Descriptor
@@ -105,7 +110,7 @@ pages:
           - name: Feed Entity
             anchor: /es/reference/realtime/v2/#message-feedentity
             children:
-              - name:    Trip Update
+              - name:	Trip Update
                 anchor: /es/reference/realtime/v2/#message-tripupdate
                 children:
                   - name: Trip Descriptor
@@ -157,7 +162,7 @@ pages:
           - name: Feed Entity
             anchor: /reference/realtime/v1/#message-feedentity
             children:
-              - name:    Trip Update
+              - name:	Trip Update
                 anchor: /reference/realtime/v1/#message-tripupdate
                 children:
                   - name: Trip Descriptor
@@ -209,7 +214,7 @@ pages:
           - name: Feed Entity
             anchor: /es/reference/realtime/v1/#message-feedentity
             children:
-              - name:    Trip Update
+              - name:	Trip Update
                 anchor: /es/reference/realtime/v1/#message-tripupdate
                 children:
                   - name: Trip Descriptor
@@ -251,8 +256,10 @@ pages:
     path: /best-practices/
     sidemenu:
       - name: Introduction
+      - name: FAQ
+      - name: Dataset Publishing & General Practices
       - name: Recommendations Organized by File
-        children:
+        children :
           - name: All Files
           - name: agency.txt
           - name: stops.txt
@@ -282,7 +289,7 @@ pages:
       - name: FAQ
       - name: Dataset Publishing & General Practices
       - name: Recommendations Organized by File
-        children:
+        children :
           - name: All Files
           - name: agency.txt
           - name: stops.txt
@@ -304,43 +311,3 @@ pages:
           - name: Lasso Routes
           - name: Branches
       - name: About This Document
-
-  - title: Guides
-    path: /guides/
-    sidemenu:
-      - name: Getting started
-      - name: Examples
-        children:
-          - name: Fare Examples
-          - name: Routes Examples
-          - name: Modelling scenarios
-          - name: Joining and splitting trains
-      - name: Frequently Asked Questions
-        children:
-          - name: Recommendations
-      - name: Support
-      - name: Tools
-        children:
-          - name: Libraries & Tutorials
-          - name: Validators
-            children:
-              - name: Feed Issues
-              - name: Validation Warnings
-              - name: Validation Errors
-
-  - title: validator
-    path: /validator/
-    sidemenu:
-      - name: Feed Issues
-      - name: Validation Warnings
-      - name: Validation Errors
-
-  - title: documentation
-    path: /documentation/
-    sidemenu:
-      - name: General Transit Feed Specification Reference
-      - name: GTFS Realtime feed (GTFS-RT)
-      - name: Extensions
-      - name: Changing GTFS
-
-

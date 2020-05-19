@@ -7,37 +7,9 @@ import SideNav from "../components/side-nav";
 import Footer from '../components/footer';
 import {useTranslation} from 'react-i18next';
 import {getPathForLanguage} from '../lib/i18n';
-import Counter from "../components/Counter";
-import Button from "../components/Button";
-import Agency from "../components/Agency";
-import Stops from "../components/Stops";
-import Routes from "../components/Routes";
-import Trips from "../components/Trips";
-import StopTimes from "../components/StopTimes";
-import CalendarDates from "../components/CalendarDates";
-import Calendar from "../components/Calendar";
-import FareAttributes from "../components/FareAttributes";
-import FareRules from "../components/FareRules";
-import Shapes from "../components/Shapes";
-import Transfers from "../components/Transfers";
 
 const renderAst = new rehypeReact({
   createElement: React.createElement,
-  components: {
-    "interactive-counter": Counter,
-    "button": Button,
-    "agency": Agency,
-    "stops": Stops,
-    "routes": Routes,
-    "trips": Trips,
-    "stoptimes": StopTimes,
-    "calendar": Calendar,
-    "calendardates": CalendarDates,
-    "fareattributes": FareAttributes,
-    "farerules": FareRules,
-    "shapes": Shapes,
-    "transfers": Transfers,
-  },
 }).Compiler
 
 function VersionSelect(props) {
