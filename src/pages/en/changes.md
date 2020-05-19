@@ -26,7 +26,7 @@ Many transit agencies provide “flexible” or “demand responsive” services
 Consistent presentation of line, service, and operator branding attributes clearly differentiate components of a transit system, making the system easier to navigate. This extension would add support for a variety of branding attributes.
 
 ##### [Service Changes](https://bit.ly/gtfs-service-changes-v3_1)
-GTFS currently has no way to represent service changes planned between one and seven days in advance. This extension allows these service changes to be reflected in GTFS.
+GTFS currently has no way to represent service changes planned between one and seven days in advance. This extension allows these service changes to be reflected in GTFS-realtime.
 
 ##### [Pathways](https://bit.ly/gtfs-pathways)
 Navigating large transit stations can be difficult and stressful, especially for riders in wheelchairs. Furthermore, maintenance, equipment malfunctions and other scheduled and unscheduled closures sometimes alter routes that riders must take within a station. This extension allows transit apps to dynamically route riders through stations.
