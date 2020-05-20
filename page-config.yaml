@@ -13,6 +13,8 @@ nav:
     link: /testing/
   - display: Best Practices
     link: /best-practices/
+  - display: Data Examples
+    link: /data-examples/
   - display: Extensions
     link: /extensions/
   - display: Changes
@@ -313,3 +315,16 @@ pages:
         - name: Lasso Routes
         - name: Branches
     - name: About This Document
+
+  - title: Data Examples
+    path: /data-examples/
+    sidemenu:
+      - name: Introduction
+        anchor: /data-examples/#introduction
+      - name: GTFS-ContinuousStops
+        anchor: /data-examples/#gtfs-continuousstops
+        children :
+          - name: Example A - Pickup and drop-off everywhere!
+            anchor: /data-examples/#example-a---pickup-and-drop-off-everywhere
+          - name: Example B - Continuous pickup and drop-off on a route section
+            anchor: /data-examples/#example-b---continuous-pickup-and-drop-off-on-a-route-section
