@@ -9,7 +9,7 @@ Before publishing, GTFS feeds should be validated in order to catch errors. A nu
 ## For GTFS-Static
 <hr>
 
-* [MobilityData gtfs-validator](https://github.com/MobilityData/gtfs-validator/blob/master/RELEASE.md) - MobilityData gtfs-validator - Verifies feed conformity to the official GTFS specification. This tool is still under development. At present, the software supports the validation of file structure and is ready for semantic validation. More development will follow in the coming months.
+* [MobilityData gtfs-validator](https://github.com/MobilityData/gtfs-validator/blob/master/RELEASE.md) Verifies feed conformity to the official GTFS specification. At present, the software supports the validation of file structure and is ready for semantic validation. This tool is under active development.
 * [FeedValidator](https://github.com/google/transitfeed/wiki/FeedValidator) - Verifies that the feed conforms to the requirements defined in the GTFS-static reference.
 * [ScheduleViewer](https://github.com/google/transitfeed/wiki/ScheduleViewer) - Visualizes geospatial and stop time feed data. This is not representative of how feed data will look in other applications; it is a basic tool for testing. Examine routes and schedules to ensure that the data feed correctly represents the system.
 * [Conveyal GTFS validator](https://github.com/conveyal/gtfs-validator) - Based on the OneBusAway GTFS modules.
