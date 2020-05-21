@@ -43,10 +43,7 @@ If the transit agency wants to emphasize that a coordination between the bus dri
 
 The transit agency Victor Valley Transit (Victorville, US-CA) applies a continuous-stop policy only on a part of route 22. A rider may board and get off the bus in any safe location within the County Fare zone. This behavior is not allowed within the Local Fare zone. On northbound trips, the bus 22 starts in the Local Fare zone at Victorville Transfer Center (A) and ends in the County Fare zone at Silver Lakes Market (F).
 
-<figure id="transitScheme">
 <img src="victor-valley-transit.svg" alt="transitScheme" id="transitScheme" class="transitScheme">
-</figure>
-
 
 #### Example B1:  Continuous pickup and drop-off starting from a scheduled stop
 `National Trails Highway - Air Expressway` is the first scheduled stop in the County Fare zone, from which the continuous pickup and drop-off is available.
