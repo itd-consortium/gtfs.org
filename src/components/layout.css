@@ -13,3 +13,34 @@ h3 {
 h4 {
     font-size: 1.25rem;
 }
+
+details {
+    border: none;
+    padding: .5em .5em 0;
+}
+
+
+summary {
+    font-weight: bold;
+    margin: -.5em -.5em 0;
+    padding: .5em;
+}
+
+details[open] {
+    border: none;
+}
+
+
+details[open] summary {
+    border-bottom: 1px solid #aaa;
+    margin-bottom: .5em;
+}
+
+
+p {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+}

@@ -1,37 +1,40 @@
 import React from 'react';
 import Layout from '../components/layout';
-import { graphql, navigate } from 'gatsby';
+import {graphql, navigate} from 'gatsby';
 import rehypeReact from 'rehype-react';
 import styles from './doc-page.module.css';
 import SideNav from "../components/side-nav";
 import Footer from '../components/footer';
-import { useTranslation } from 'react-i18next';
-import { getPathForLanguage } from '../lib/i18n';
+import {useTranslation} from 'react-i18next';
+import {getPathForLanguage} from '../lib/i18n';
 
 const renderAst = new rehypeReact({
-  createElement: React.createElement
+  createElement: React.createElement,
+  components: {
+  },
 }).Compiler
 
 function VersionSelect(props) {
-  const { t, i18n } = useTranslation();
+  const {t, i18n} = useTranslation();
   return (
-    <div className="card mb-4 mt-3">
-      <div className="card-body">
-        <form className={styles.versionSelectForm}>
-          <label htmlFor="versionSelect">{t('version')}</label>
-          <select 
-            id="versionSelect"
-            value={props.location.pathname}
-            onChange={(event) => navigate(event.target.value)}
-          >
-            <option value={getPathForLanguage('/reference/realtime/v2/', i18n.language)}>2.0 ({t('latest')})</option>
-            <option value={getPathForLanguage('/reference/realtime/v1/', i18n.language)}>1.0</option>
-          </select>
-        </form>
+      <div className="card mb-4 mt-3">
+        <div className="card-body">
+          <form className={styles.versionSelectForm}>
+            <label htmlFor="versionSelect">{t('version')}</label>
+            <select
+                id="versionSelect"
+                value={props.location.pathname}
+                onChange={(event) => navigate(event.target.value)}
+            >
+              <option value={getPathForLanguage('/reference/realtime/v2/', i18n.language)}>2.0 ({t('latest')})</option>
+              <option value={getPathForLanguage('/reference/realtime/v1/', i18n.language)}>1.0</option>
+            </select>
+          </form>
+        </div>
       </div>
-    </div>
   );
 }
+
 
 function throttled(delay, fn) {
   let lastCall = 0;
@@ -123,32 +126,32 @@ export default class DocPage extends React.Component {
       if (hast.type !== 'text') {
         memo.push(hast);
       }
-      
+
       return memo;
     }, []);
 
     return (
-      <Layout lang={lang} location={location}>
-        <div className={styles.container}>
-          <div className={styles.navContainer}>
-            <SideNav
-              content={pageContents}
-              route={pathname}
-              currentOffset={pageYOffset}
-              pageAnchors={this.anchors}
-            />
+        <Layout lang={lang} location={location}>
+          <div className={styles.container}>
+            <div className={styles.navContainer}>
+              <SideNav
+                  content={pageContents}
+                  route={pathname}
+                  currentOffset={pageYOffset}
+                  pageAnchors={this.anchors}
+              />
+            </div>
+            <div className={styles.docContainer}>
+              {showTitle && <h1>{pageTitle}</h1>}
+              {showVersionControl && <VersionSelect location={location}/>}
+              {renderAst({
+                children: hast,
+                type: 'root'
+              })}
+            </div>
+            <Footer className="footerDocPage"/>
           </div>
-          <div className={styles.docContainer}>
-            {showTitle && <h1>{pageTitle}</h1>}
-            {showVersionControl && <VersionSelect location={location} />}
-            {renderAst({
-              children: hast,
-              type: 'root'
-            })}
-          </div>
-          <Footer className="footerDocPage" />
-        </div>
-      </Layout>
+        </Layout>
     );
   }
 }
@@ -156,7 +159,6 @@ export default class DocPage extends React.Component {
 export const pageQuery = graphql`
   query($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
-      html
       htmlAst
       frontmatter {
         path,

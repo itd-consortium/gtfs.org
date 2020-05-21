@@ -4,14 +4,14 @@ const fs = require('fs');
 
 const addAnchorAddress = function(basePath, pageContents) {
   pageContents.forEach((item) => {
-  if (!item.anchor) item.anchor = `${basePath}#` + item.name.toLowerCase().replace(/ /g, '-').replace(/&/g, '');
+    if (!item.anchor) item.anchor = `${basePath}#` + item.name.toLowerCase().replace(/ /g, '-').replace(/&/g, '');
     item.children && item.children.map((firstChild) => {
       if (!firstChild.anchor) firstChild.anchor = `${basePath}#` + firstChild.name.toLowerCase().replace(/ /g, '-').replace(/\./g, '');
-        firstChild.children && firstChild.children.map((secondChild) => {
-          if (!secondChild.anchor) {
-            secondChild.anchor = `${basePath}#` + secondChild.name.toLowerCase().replace(/ /g, '-').replace(/\./g, '');
-          }
-        })
+      firstChild.children && firstChild.children.map((secondChild) => {
+        if (!secondChild.anchor) {
+          secondChild.anchor = `${basePath}#` + secondChild.name.toLowerCase().replace(/ /g, '-').replace(/\./g, '');
+        }
+      })
     })
   })
 }
@@ -77,8 +77,8 @@ exports.createPages = ({ actions, graphql }) => {
   const docTemplate = path.resolve('src/templates/doc-page.js')
 
   createRedirect({
-    fromPath: '/reference/realtime', 
-    toPath: '/reference/realtime/v2', 
+    fromPath: '/reference/realtime',
+    toPath: '/reference/realtime/v2',
     isPermanent: true
   });
 
