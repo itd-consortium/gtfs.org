@@ -13,7 +13,7 @@ jobs:
           name: Deploy to s3
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              aws s3 sync public s3://staging.gtfs.org-mobilitydata/ --delete
+              aws s3 sync public s3://gtfs.org/ --delete
             elif [ "${CIRCLE_BRANCH}" == "production" ]; then
               aws s3 sync public s3://gtfs.org/ --delete
             fi
