@@ -4,6 +4,7 @@ jobs:
     docker:
       - image: circleci/node:10.15.0
     steps:
+      - run: sudo apt-get update
       - run: sudo apt-get -y -qq install awscli
       - checkout
       - run: npm install
