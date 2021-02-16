@@ -4,7 +4,7 @@ jobs:
     docker:
       - image: circleci/node:10.15.0
     steps:
-      - run: sudo apt-get -y -qq install awscli
+      - run: sudo apt-get -y -qq install awscli --fix-missing
       - checkout
       - run: npm install
       - run: npm run fetchdata
