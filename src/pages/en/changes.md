@@ -14,4 +14,4 @@ GTFS is a community driven data format. Users can propse and vote on changes to 
 
 ### MobilityData
 
-To improve the need to have a better representation of transit service features, MobilityData project has proposed different GTFS extensions. Help us to understand better your needs by providing your feedback in each of the proposed GTFS extensions: [bit.ly/gtfs-extensions](http://bit.ly/gtfs-extensions)
+To improve the representation of transit service features, MobilityData has proposed several GTFS extensions. Help us better understand your needs by providing your feedback on the proposed GTFS extensions: [bit.ly/gtfs-extensions](http://bit.ly/gtfs-extensions)
